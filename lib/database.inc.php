@@ -15,6 +15,7 @@
 class SQL{
 
 	public $conn=null;
+	public $error=null;
 
 	public function __construct($dbases){
 
@@ -36,7 +37,7 @@ class SQL{
 		if($q !== false){
 			return $q;
 		}else{
-			print mysqli_error($this->conn);
+			$this->error=mysqli_error($this->conn);
 			return false;
 		}
 	}
@@ -47,7 +48,7 @@ class SQL{
 		if($q !== false){
 			return $q;
 		}else{
-			print mysqli_error($this->conn);
+			$this->error=mysqli_error($this->conn);
 			return 0;
 		}
 	}
@@ -58,13 +59,11 @@ class SQL{
 			if($q !== false){
 				return $q;
 			}else{
-				print 'Query returns false';
-				print mysqli_error($this->conn);
+				$this->error=mysqli_error($this->conn);
 				return false;
 			}
 		}else{
-			print 'Query returns false';
-			print mysqli_error($this->conn);
+			$this->error=mysqli_error($this->conn);
 			return false;
 		}
 	}
