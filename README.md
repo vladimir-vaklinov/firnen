@@ -2,7 +2,9 @@ Fírnen GALLERY
 ======
 
 <p>
-Firnen Gallery SoftUni team project
+Firnen Gallery SoftUni team project<br/>
+You can explore the website from this URL: <a href="http://firnen.info" target="_blank">http://firnen.info</a><br/>
+
 </p>
 
 
