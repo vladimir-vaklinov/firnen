@@ -1,0 +1,159 @@
+#new-album{
+	width:930px;
+	min-height:170px;
+	padding:35px;
+	background-color:#F16C65;
+}
+#new-album h1{
+	display:block;
+	width:100%;
+	line-height:1.1;
+	color:#FFF;
+	font-size:1.86em;
+	font-weight:normal;
+	text-align:center;
+}
+
+#edit-album{
+	width:930px;
+	min-height:170px;
+	padding:35px;
+	background-color:#F16C65;
+}
+#edit-album h2{
+	display:block;
+	width:100%;
+	line-height:1.1;
+	color:#FFF;
+	font-size:1.86em;
+	font-weight:normal;
+	text-align:center;
+}
+
+
+#add-photo{
+	width:930px;
+	min-height:170px;
+	padding:35px;
+	background-color:#F16C65;
+}
+#add-photo h2{
+	display:block;
+	width:100%;
+	line-height:1.1;
+	color:#FFF;
+	font-size:1.86em;
+	font-weight:normal;
+	text-align:center;
+}
+
+/* ***************** MANAGE ALBUMS ********************* */
+#albums-manage-blk{
+	width:965px;
+	padding:29px 0 29px 35px;
+}
+#albums-manage-blk h2{
+	display:block;
+	width:100%;
+	height:20px;
+	color:#6A738F;
+	text-align:left;
+}
+#albums-manage-items{
+	display:block;
+	width:100%;
+	padding-top:10px;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.album-manage-block{
+	width:220px;
+	height:220px;
+	border-right:17px solid #FFF;
+	border-bottom:16px solid #FFF;
+	background-color:#CBCBD0;
+}
+
+.album-manage-block a.aimgi{
+	display:block;
+	width:204px;
+	height:153px;
+	padding:8px;
+	background-color:#B6B7BF;
+}
+.album-manage-block a.aimgi:hover{
+	background-color:#F16C65;
+}
+.album-manage-block .album-manage-btns{
+	display:block;
+	width:100%;
+	height:20px;
+	padding-top:5px;
+}
+.album-manage-block .album-manage-btns strong{
+	display:block;
+	width:100%;
+	color:#6A738F;
+}
+.album-manage-block .album-manage-btns a{
+	display:inline-block;
+	width:30%;
+	color:#000;
+}
+
+/* ***************** MANAGE PHOTOS ********************* */
+#photos-manage-blk{
+	width:965px;
+	padding:29px 0 29px 35px;
+}
+#photos-manage-blk h2{
+	display:block;
+	width:100%;
+	height:20px;
+	color:#6A738F;
+	text-align:left;
+}
+#photos-manage-items{
+	display:block;
+	width:100%;
+	padding-top:10px;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-wrap:wrap;
+	flex-wrap:wrap;
+}
+.photos-manage-block{
+	width:220px;
+	height:230px;
+	border-right:17px solid #FFF;
+	border-bottom:16px solid #FFF;
+	background-color:#CBCBD0;
+}
+.photos-manage-block a.aimgi{
+	display:block;
+	width:204px;
+	height:153px;
+	padding:8px;
+	background-color:#B6B7BF;
+}
+.photos-manage-block a.aimgi:hover{
+	background-color:#F16C65;
+}
+.photos-manage-block .photos-manage-btns{
+	display:block;
+	width:100%;
+	height:20px;
+	padding-top:5px;
+}
+.photos-manage-block .photos-manage-btns strong{
+	display:block;
+	width:100%;
+	color:#6A738F;
+}
+.photos-manage-block .photos-manage-btns a{
+	display:inline-block;
+	width:30%;
+	color:#000;
+}

@@ -1,0 +1,23 @@
+#profile{
+	width:930px;
+	min-height:200px;
+	padding:35px;
+	background-color:#F16C65;
+}
+
+/* ********************** REGISTRATION FORM ********************** */
+#profile-form{
+	width:690px;
+	height:170px;
+	text-align:left;
+	float:left;
+}
+#profile-form h1{
+	display:block;
+	width:100%;
+	line-height:1.1;
+	color:#FFF;
+	font-size:1.86em;
+	font-weight:normal;
+	text-align:left;
+}

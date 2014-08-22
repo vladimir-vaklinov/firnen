@@ -5,48 +5,6 @@
 	background-color:#F16C65;
 }
 
-#signup form{
-	display:block;
-	width:100%;
-	min-height:150px;
-	padding-top:20px;
-}
-
-#signup form p{
-	display:block;
-	width:100%;
-	padding-bottom:10px;
-}
-#signup form p input{
-	display:inline-block;
-	width:210px;
-	padding:8px 11px;
-	margin-right:18px;
-	color:#FAB4B0;
-	border:0;
-	border-radius:5px 5px 5px 5px;
-	background-color:#d75650;
-	font-size:1.1em;
-}
-::-webkit-input-placeholder{color:#FAB4B0;opacity:1;}
-:-moz-placeholder{color:#FAB4B0;opacity:1;}
-::-moz-placeholder{color:#FAB4B0;opacity:1;}
-:-ms-input-placeholder{color:#FAB4B0;opacity:1;}
-
-#signup form p button{
-	display:inline-block;
-	padding:7px 18px;
-	line-height:1;
-	margin-top:12px;
-	color:#FFFFFF;
-	border:1px solid #FFFFFF;
-	border-radius:6px 6px 6px 6px;
-	background-color:#F16C65;
-	font-size:1.13em;
-	text-decoration:none;
-	cursor:pointer;
-}
-
 /* ********************** REGISTRATION FORM ********************** */
 #register-form{
 	width:690px;

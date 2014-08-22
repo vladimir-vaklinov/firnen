@@ -1,16 +1,20 @@
 <?php
 
-class login{
+class login
+{
 
-	public function loginForm(){
+	public function loginForm()
+	{
 
-		$result='';$backerr='';$passval='';
-		$db = new SQL($GLOBALS['dbconf']);
+		$result='';
+		$backerr='';
+		$passval='';
 
 		if(isset($_POST['logincode'])){
-			$passval = $db->real_escape_string( trim($_POST['logincode']) );
+
+			$passval=filter_var($_POST['logincode'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
 			if($passval==$GLOBALS['adminpass']){
-				$_SESSION['firnen_admin_login'] = 1;
+				$_SESSION['firnen_admin_login']=1;
 			}else{
 				$backerr='<h3 class="statusline">Wrong password</h3>';
 			}
