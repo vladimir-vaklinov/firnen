@@ -191,10 +191,12 @@ form.frm p input{
 	background-color:#d75650;
 	font-size:1.1em;
 }
+/*
 ::-webkit-input-placeholder{color:#FAB4B0;opacity:1;}
 :-moz-placeholder{color:#FAB4B0;opacity:1;}
 ::-moz-placeholder{color:#FAB4B0;opacity:1;}
 :-ms-input-placeholder{color:#FAB4B0;opacity:1;}
+*/
 
 form.frm p button{
 	display:inline-block;
