@@ -38,6 +38,7 @@ class publicPhotos
 						</a>
 						<div class="p-photos-inf">
 							<strong class="p-photos-name">'.$a['name'].'</strong>
+							<strong class="p-photos-name">by Author (link)</strong>
 							<em class="p-photos-date">'.date('Y/m/d',$a['created']).'</em>
 						</div>
 					</div>';
