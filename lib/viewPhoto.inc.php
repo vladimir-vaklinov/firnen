@@ -31,7 +31,6 @@ class viewPhoto
 		$username='';
 		$photoname='';
 		$image='';
-		$created='';
 
 		$q=$db->query("SELECT * FROM `photos` WHERE `phid`='".$phid."' ");
 		if($db->num_rows($q)>0){
@@ -40,7 +39,6 @@ class viewPhoto
 				$uid=$a['uid'];
 				$photoname=$a['name'];
 				$image='/photos/'.$a['uid'].'/'.$a['filename'];
-				$created = $a['created'];
 			}
 		}
 
@@ -58,24 +56,39 @@ class viewPhoto
 		}
 
 
+		$nextphoto='#';
+		$prevphotos='#';
+		$q=$db->query("SELECT * FROM `photos` WHERE `phid` > '".$phid."' ORDER BY `phid` ASC LIMIT 1 ");
+		if($db->num_rows($q)>0){
+			while($a=$db->fetch_array($q)){
+				$nextphoto='/photo/'.$a['phid'].'/';
+			}
+		}
+		$q=$db->query("SELECT * FROM `photos` WHERE `phid` < '".$phid."' ORDER BY `phid` DESC LIMIT 1 ");
+		if($db->num_rows($q)>0){
+			while($a=$db->fetch_array($q)){
+				$prevphotos='/photo/'.$a['phid'].'/';
+			}
+		}
+
 
 		$result='
 		<div id="viewphoto">
 			<h1 class="viewphoto-album-name"><a href="/album/'.$aid.'/">'.$albumname.'</a></h1>
-			<h2 class="viewphoto-username">'.$username.'</h2>
+			<h2 class="viewphoto-username"><img src="/assets/img/user_ico.png" alt="'.$username.'" />'.$username.'</h2>
 
 			<div id="view-photo-blk">
 
-				<div class="p-photos-block">
+				<div id="p-photos-block">
+					<a href="'.$nextphoto.'" id="p-photos-block-arr-left"></a>
 					<img src="'.$image.'" alt="'.$photoname.'"/>
-					<div class="p-photos-inf">
-						<strong class="p-photos-name">'.$photoname.'</strong>
-						<em class="p-photos-date">'.date('Y/m/d', $created).'</em>
-					</div>
+					<a href="'.$prevphotos.'" id="p-photos-block-arr-right"></a>
 				</div>
-				<h2>'.$photoname.'</h2>
 
 			</div>
+
+			<h2 id="p-photo-name">'.$photoname.'</h2>
+
 		</div>';
 
 

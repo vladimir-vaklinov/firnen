@@ -36,7 +36,7 @@ class myProfile
 			if(isset($_POST['lname'])&&!empty($_POST['lname'])){
 				$lname=filter_var($_POST['lname'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
 				$willUpdate[]="`lname`='".$lname."' ";
-				$_SESSION['user']['fname']=$lname;
+				$_SESSION['user']['lname']=$lname;
 			}
 			if(isset($_POST['password'])&&!empty($_POST['password'])){
 				$password=filter_var($_POST['password'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);

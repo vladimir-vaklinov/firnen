@@ -57,9 +57,9 @@ class websiteCore
 		 * Checking if some of the menus is selected and it is - we
 		 * mark it as selected
 		 */
-		if(isset($_GET['task_0'])&& (in_array($_GET['task_0'],array('gallery','photo'))) )
+		if(isset($_GET['task_0'])&&(in_array($_GET['task_0'],array('gallery','photo'))) )
 			$markAsActive[0]=$sel;
-		if(isset($_GET['task_0'])&&($_GET['task_0']=='albums'))
+		if(isset($_GET['task_0'])&&(in_array($_GET['task_0'],array('albums','album'))) )
 			$markAsActive[1]=$sel;
 		if(isset($_GET['task_0'])&&($_GET['task_0']=='authors'))
 			$markAsActive[2]=$sel;
@@ -73,11 +73,11 @@ class websiteCore
 		$result.='
 				<li id="nav-photos" '.$markAsActive[0].'><a href="/gallery/">Photos</a></li>
 				<li id="nav-albums" '.$markAsActive[1].'><a href="/albums/">Albums</a></li>
-				<li id="nav-authors" '.$markAsActive[2].'><a href="/authors/">Authors</a></li>';
+				<li id="nav-authors" '.$markAsActive[2].'><a href="/authors/">By Author</a></li>';
 		if(isset($_SESSION['user']['fname'])){
 			$result.='
 				<li id="nav-profile" '.$markAsActive[4].'><a href="/profile/">
-					<img src="/assets/img/username_ico.jpg" alt="'.$_SESSION['user']['fname'].'" />'.$_SESSION['user']['fname'].'</a></li>
+					<img src="/assets/img/user_ico.png" alt="'.$_SESSION['user']['fname'].'" />'.$_SESSION['user']['fname'].'</a></li>
 				<li id="nav-myalbums" '.$markAsActive[5].'><a href="/myalbums/">My Albums</a></li>
 			';
 		}else{

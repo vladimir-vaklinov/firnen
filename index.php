@@ -50,7 +50,7 @@ include(__DIR__."/lib/websiteCore.inc.php");
 
 if(!isset($_SESSION['user'])||(isset($_GET['task_0'])&&($_GET['task_0']=='logout'))){
 	$_SESSION['user']=array();
-	if($_GET['task_0']=='logout')
+	if(isset($_GET['task_0']) && ($_GET['task_0']=='logout'))
 		@header("Location:/");
 
 }
@@ -130,6 +130,21 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='photo')){
 
 }
 
+if(isset($_GET['task_0'])&&($_GET['task_0']=='albums')){
+
+	include(__DIR__."/lib/publicAlbums.inc.php");
+	$pa=new publicAlbums();
+	$GLOBALS['contentblock']=$pa->contents();
+
+}
+
+if(isset($_GET['task_0'])&&($_GET['task_0']=='album')){
+
+	include(__DIR__."/lib/viewAlbum.inc.php");
+	$va=new viewAlbum();
+	$GLOBALS['contentblock']=$va->contents();
+
+}
 
 include(__DIR__."/htmls.inc.php");
 print $GLOBALS['html'];

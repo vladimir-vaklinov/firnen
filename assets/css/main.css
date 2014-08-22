@@ -58,14 +58,14 @@ header{
 	display:inline-block;
 	width:150px;
 	padding:2px;
-	font-size:12px;
+	font-size:0.9em;
 	color:#CCCCCC;
 	background-color:#393b48;
 	border:1px solid #8088A3;
 }
 #search-form button{
 	display:inline-block;
-	font-size:12px;
+	font-size:0.9em;
 	border:0;
 	color:#8088A3;
 	background-color:#2D2F3B;
