@@ -41,8 +41,8 @@ class signUp
 					$id=$db->insert_id();
 					$_SESSION['user']=array('id'=>$id, 'fname'=>$fname, 'lname'=>$lname, 'email'=>$email);
 					$this->actionstate='thankyou';
-					$this->successmsg='Your registration completed successfully, click
-						<a href="/myalbums/">here</a> to create your first album';
+					$dir = '/myalbums/';
+					$this->successmsg='Your registration completed successfully, click<a href="'.$dir.'">here</a> to create your first album';
 				}else{
 					$this->errormsg='<div class="errormsg">'.$db->error.'</div>';
 
