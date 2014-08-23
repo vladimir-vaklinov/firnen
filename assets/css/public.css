@@ -1,217 +1,241 @@
 #publicphotos{
-	width:965px;
-	padding:29px 0 29px 35px;
+    width:965px;
+    padding:29px 0 29px 35px;
 
 }
 #publicphotos h1{
-	display:block;
-	width:100%;
-	height:20px;
-	color:#6A738F;
-	text-align:left;
-	font-size:1.86em;
-	font-weight:normal;
+    display:block;
+    width:100%;
+    height:20px;
+    color:#6A738F;
+    text-align:left;
+    font-size:1.86em;
+    font-weight:normal;
 }
 #p-albums-items{
-	display:block;
-	width:100%;
-	padding-top:10px;
-	display:-webkit-flex;
-	display:flex;
-	-webkit-flex-wrap:wrap;
-	flex-wrap:wrap;
+    display:block;
+    width:100%;
+    padding-top:10px;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
 }
 
 .p-photos-block{
-	width:220px;
-	height:235px;
-	border-right:17px solid #FFF;
-	border-bottom:16px solid #FFF;
-	background-color:#CBCBD0;
+    width:220px;
+    height:235px;
+    border-right:17px solid #FFF;
+    border-bottom:16px solid #FFF;
+    background-color:#CBCBD0;
 }
 .p-photos-block a.aimgi{
-	display:block;
-	width:204px;
-	height:153px;
-	padding:8px;
-	background-color:#B6B7BF;
+    display:block;
+    width:204px;
+    height:153px;
+    padding:8px;
+    background-color:#B6B7BF;
 }
 .p-photos-block a.aimgi:hover{
-	background-color:#F16C65;
+    background-color:#F16C65;
 }
 .p-photos-block .p-photos-inf{
-	display:block;
-	width:100%;
-	height:20px;
-	padding-top:5px;
+    display:block;
+    width:100%;
+    height:20px;
+    padding-top:5px;
 }
 .p-photos-block .p-photos-inf strong{
-	display:block;
-	width:90%;
-	padding-left:5px;
-	text-align:left;
-	color:#6A738F;
+    display:block;
+    width:90%;
+    padding-left:5px;
+    text-align:left;
+    color:#6A738F;
 }
 .p-photos-block .p-photos-inf em{
-	display:block;
-	width:60%;
-	padding-left:5px;
-	text-align:left;
-	font-size:0.9em;
-	color:#6A738F;
+    display:block;
+    width:60%;
+    padding-left:5px;
+    text-align:left;
+    font-size:0.9em;
+    color:#6A738F;
 }
 
 /* ***************** VIEW PHOTOS ************************ */
 
 #viewphoto{
-	width:965px;
-	padding:29px 0 29px 35px;
+    width:965px;
+    padding:29px 0 29px 35px;
 }
 #viewphoto h1.viewphoto-album-name{
-	display:block;
-	width:100%;
-	height:60px;
-	line-height:1;
-	color:#6A738F;
-	text-align:left;
-	font-size:1.86em;
-	font-weight:normal;
+    display:block;
+    width:100%;
+    height:60px;
+    line-height:1;
+    color:#6A738F;
+    text-align:left;
+    font-size:1.86em;
+    font-weight:normal;
 }
 #viewphoto h1.viewphoto-album-name a{
-	color:#6A738F;
-	font-size:1.86em;
-	font-weight:normal;
-	text-decoration:none;
+    color:#6A738F;
+    font-size:1.86em;
+    font-weight:normal;
+    text-decoration:none;
 }
 #viewphoto h2.viewphoto-username{
-	display:block;
-	width:100%;
-	height:30px;
-	color:#2d2f3b;
-	text-align:left;
-	font-size:1.13em;
-	font-weight:normal;
+    display:block;
+    width:100%;
+    height:30px;
+    color:#2d2f3b;
+    text-align:left;
+    font-size:1.13em;
+    font-weight:normal;
 }
 #viewphoto h2.viewphoto-username img{
-	display:block;
-	width:20px;
-	height:19px;
-	margin-right:10px;
-	float:left;
+    display:block;
+    width:20px;
+    height:19px;
+    margin-right:10px;
+    float:left;
 }
 #view-photo-blk{
-	width:930px;
-	height:605px;
-	background-color:#CFCFD4;
+    width:930px;
+    height:605px;
+    background-color:#CFCFD4;
 }
 #view-photo-blk a{
-	display:block;
-	width:63px;
-	height:588px;
-	background-color:#CFCFD4;
+    display:block;
+    width:63px;
+    height:588px;
+    background-color:#CFCFD4;
 }
 #p-photos-block-arr-left{
-	background:#CFCFD4 url(/assets/img/big_arr_left.jpg) no-repeat center center;
-	float:left;
+    background:#CFCFD4 url(/assets/img/big_arr_left.jpg) no-repeat center center;
+    float:left;
 }
 #view-photo-blk img{
-	display:block;
-	width:784px;
-	height:588px;
-	border:8px solid #B6B7BF;
-	float:left;
+    display:block;
+    width:784px;
+    height:588px;
+    border:8px solid #B6B7BF;
+    float:left;
 }
 #p-photos-block-arr-right{
-	background:#CFCFD4 url(/assets/img/big_arr_right.jpg) no-repeat center center;
-	float:right;
+    background:#CFCFD4 url(/assets/img/big_arr_right.jpg) no-repeat center center;
+    float:right;
 }
 h2#p-photo-name{
-	display:block;
-	width:100%;
-	height:60px;
-	padding-top:10px;
-	line-height:1;
-	color:#6A738F;
-	text-align:left;
-	font-size:1.86em;
-	font-weight:normal;
+    display:block;
+    width:100%;
+    height:60px;
+    padding-top:10px;
+    line-height:1;
+    color:#6A738F;
+    text-align:left;
+    font-size:1.86em;
+    font-weight:normal;
 }
 
 /* ******************* ALBUMS ******************* */
 #albums-blk{
-	width:965px;
-	padding:29px 0 29px 35px;
+    width:965px;
+    padding:29px 0 29px 35px;
 
 }
 #albums-blk h2{
-	display:block;
-	width:100%;
-	height:20px;
-	color:#6A738F;
-	text-align:left;
+    display:block;
+    width:100%;
+    height:20px;
+    color:#6A738F;
+    text-align:left;
 }
 #albums-blk #albums-blk-items{
-	display:block;
-	width:100%;
-	padding-top:10px;
-	display:-webkit-flex;
-	display:flex;
-	-webkit-flex-wrap:wrap;
-	flex-wrap:wrap;
+    display:block;
+    width:100%;
+    padding-top:10px;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
 }
 .album-block{
-	width:220px;
-	height:220px;
-	border-right:17px solid #FFF;
-	border-bottom:16px solid #FFF;
-	background-color:#CBCBD0;
+    width:220px;
+    height:220px;
+    border-right:17px solid #FFF;
+    border-bottom:16px solid #FFF;
+    background-color:#CBCBD0;
 }
 
 .album-block a.aimgi{
-	display:block;
-	width:204px;
-	height:153px;
-	padding:8px;
-	background-color:#B6B7BF;
+    display:block;
+    width:204px;
+    height:153px;
+    padding:8px;
+    background-color:#B6B7BF;
 }
 .album-block a.aimgi:hover{
-	background-color:#F16C65;
+    background-color:#F16C65;
 }
 
 /* ******************* INSIDE ALBUM ******************* */
 #view-album{
-	width:965px;
-	padding:29px 0 29px 35px;
+    width:965px;
+    padding:29px 0 10px 35px;
 }
 #view-album-username{
-	display:block;
-	width:100%;
-	height:30px;
-	color:#2d2f3b;
-	text-align:left;
-	font-size:1.13em;
-	font-weight:normal;
+    display:block;
+    width:100%;
+    height:30px;
+    color:#2d2f3b;
+    text-align:left;
+    font-size:1.13em;
+    font-weight:normal;
 }
 #view-album-username img{
-	display:block;
-	width:20px;
-	height:19px;
-	margin-right:10px;
-	float:left;
+    display:block;
+    width:20px;
+    height:19px;
+    margin-right:10px;
+    float:left;
 }
 #view-album-blk{
-	width:930px;
-	height:605px;
-	background-color:#CFCFD4;
+    width:930px;
+    height:405px;
+    background-color:#CFCFD4;
 }
 #view-album-block{
 
 }
 
 #view-album-block img{
-	display:block;
-	width:930px;
-	height:697px;
-	border:8px solid #B6B7BF;
-	float:left;
+    display:block;
+    width:230px;
+    height:153px;
+    border:1px solid #B6B7BF;
+    float:left;
+}
+
+#comment-block{
+    background-color:#CFCFD4;
+    width:830px;
+    height:500px;
+    margin:10px 0 40px 80px;
+}
+
+#comment-text{
+    margin:20px auto 0 auto;
+    width:600px;
+    height: 50px;
+}
+#comment-button{
+    width:130px;
+    height:52px;
+    position:relative;
+    float:right;
+    top:20px;
+    right:40px;
+    background: #FFF;
+    border:1px solid black;
+    font-weight:bold;
 }

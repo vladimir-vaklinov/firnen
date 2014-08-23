@@ -10,64 +10,70 @@
 
 class viewAlbum{
 
-	public function contents(){
-		global $db;
+    public function contents(){
+        global $db;
 
-		$result='';
+        $result='';
 
-		$aid=0;
-		if(isset($_GET['task_1'])&&(is_numeric($_GET['task_1']))){
-			$aid=intval($_GET['task_1']);
-		}else{
-			@header("Location:/");
-		}
+        $aid=0;
+        if(isset($_GET['task_1'])&&(is_numeric($_GET['task_1']))){
+            $aid=intval($_GET['task_1']);
+        }else{
+            @header("Location:/");
+        }
 
-		$uid=0;
-		$albumname='';
-		$username='';
-		$image='';
+        $uid=0;
+        $albumname='';
+        $username='';
+        $image='';
 
-		$q=$db->query("SELECT *,IFNULL( (SELECT `filename` FROM `photos` WHERE `photos`.`aid`=`albums`.`aid`
-						ORDER BY `phid` DESC LIMIT 1), '') AS `photo` FROM `albums` WHERE `aid`='".$aid."' ");
-		if($db->num_rows($q)>0){
-			while($a=$db->fetch_array($q)){
-				$uid=$a['uid'];
-				$albumname=$a['name'];
-				if(!empty($a['photo']))$image='/photos/'.$a['uid'].'/'.$a['photo'];
-			}
-		}
+//		$q=$db->query("SELECT *,IFNULL( (SELECT `filename` FROM `photos` WHERE `photos`.`aid`=`albums`.`aid`
+//						ORDER BY `phid` DESC LIMIT 1), '') AS `photo` FROM `albums` WHERE `aid`='".$aid."' ");
+//		if($db->num_rows($q)>0){
+//			while($a=$db->fetch_array($q)){
+//				$uid=$a['uid'];
+//				$albumname=$a['name'];
+//				if(!empty($a['photo']))$image='/photos/'.$a['uid'].'/'.$a['photo'];
+//			}
+//		}
+//
+//		$qu=$db->query("SELECT * FROM `users` WHERE `uid`='".$uid."' ");
+//		if($db->num_rows($qu)>0){
+//			while($a=$db->fetch_array($qu)){
+//				$username=$a['fname'];
+//			}
+//		}
+        $page=10;
 
-		$qu=$db->query("SELECT * FROM `users` WHERE `uid`='".$uid."' ");
-		if($db->num_rows($qu)>0){
-			while($a=$db->fetch_array($qu)){
-				$username=$a['fname'];
-			}
-		}
-
-
-		$result='
+        $result='
 		<div id="view-album">
-			<h2 id="view-album-username"><img src="/assets/img/user_ico.png" alt="'.$username.'" />'.$username.'</h2>
+		<h2 id="view-album-username"><img src="/assets/img/user_ico.png" alt="'.$username.'" />'.$username.'</h2>
 
-			<div id="view-album-blk">
+        <div id="view-album-blk">';
+        $q=$db->query("SELECT * FROM `photos` WHERE `aid`='".$aid."' ORDER BY `phid` DESC LIMIT ".$page);
+        if($db->num_rows($q)>0){
+            while($a=$db->fetch_array($q)){
 
-				<div id="view-album-block">
-					<img src="'.$image.'" alt="'.$albumname.'"/>
-				</div>
+                $image='/photos/'.$a['uid'].'/t_'.$a['filename'];
 
-			</div>
+                $result.='	<div id="view-album-block">
+					<a href="/photo/'.$a['phid'].'/" class="aimgi">
+							<img src="'.$image.'" alt="'.$a['name'].'"/>
+						</a>
+				</div>';
+            }
+        }
+        $result.='
+        </div>
+        <h2 id="view-album-name">'.$albumname.'</h2>
+        </div>
+		<div id=comment-block>
+            <textarea name="comments-field" id="comment-text" placeholder:"Write a comment..."></textarea>
+            <input type="submit" value="Comment" id="comment-button"/>
+	    </div>';
 
-			<h2 id="view-album-name">'.$albumname.'</h2>
+        return $result;
 
-		</div>';
-
-
-
-
-
-
-		return $result;
-
-	}
+    }
 
 }
