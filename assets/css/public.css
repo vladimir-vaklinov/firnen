@@ -202,7 +202,7 @@ h2#p-photo-name{
 #view-album-blk{
     width:930px;
     height:405px;
-    background-color:#CFCFD4;
+    background-color:#FFF;
 }
 #view-album-block{
 
@@ -217,10 +217,9 @@ h2#p-photo-name{
 }
 
 #comment-block{
-    background-color:#CFCFD4;
-    width:730px;
-    height:300px;
-    margin:10px 0 40px 80px;
+    background-color:#1B1F2E;
+    width:930px;
+    height:200px;
 }
 
 #comment-text{
@@ -239,4 +238,36 @@ h2#p-photo-name{
     margin-top:20px;
     width:300px;
     height:25px;
+}
+#comment-list{
+    width:600px;
+    margin:0 auto;
+}
+#namestyle{
+    color:#F16C65;
+    font-weight:bold;
+    font-size:15px;
+}
+#commentstyle{
+    font-size:15px;
+    font-weight:bold;
+    color:#000000;
+}
+#datestyle{
+    color:#FAB4B0;
+}
+#deletestyle{
+    position:relative;
+    left:190px;
+    top:-40px;
+    background-color: #FFF;
+    border:1px solid #FFF;
+}
+hr{
+    width:80%;
+    margin:0 auto;
+}
+#full-comment{
+    width:300px;
+    margin:0 auto;
 }

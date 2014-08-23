@@ -89,7 +89,7 @@ class viewAlbum
 						$result.='
 							<a href="/photo/'.$a['phid'].'/" class="aimgi">
 									<img src="'.$image.'" alt="'.$a['name'].'"/>
-								</a><br>';
+								</a>';
 
 					}
 					$result.='
@@ -101,8 +101,8 @@ class viewAlbum
 			<div id="comment-block">
 				<h2 id="view-album-name">'.$albumname.'</h2>
 				<form method="post">
-					<p><input type="text" name="name" id="comment-uname" value="" placeholder="Your Name..." /></p>
-					<p><textarea name="comment" placeholder="Write a comment..." id="comment-text"></textarea></p>
+					<p><input type="text" name="name" id="comment-uname" value="" placeholder="Your Name..." required="required"/></p>
+					<p><textarea name="comment" placeholder="Write a comment..." id="comment-text"required="required"></textarea></p>
 					<p><button type="submit" id="comment-button">Comment</button></p>
 					<input type="hidden" name="action" value="addcomment"/>
 				</form>
@@ -114,7 +114,17 @@ class viewAlbum
 			$q=$db->query("SELECT * FROM `comments` WHERE `aid`='".$aid."' ORDER BY `cdate` DESC");
 			if($db->num_rows($q)>0){
 				while($a=$db->fetch_array($q)){
-					$result.=$a['uname'].'<br/>'.$a['comment'].'<br/>'.date('Y/m/d.',$a['cdate']).'<br/><br/>';
+					$result.='<div id=full-comment><em id=namestyle>'.$a['uname'].'</em>:'.'<em id=commentstyle>'.$a['comment'].'</em><br/>'
+                             .'<em id=datestyle>'.date('Y/m/d.',$a['cdate']).'</em></div>'.
+                             '<form method="post">
+                             <button id="deletestyle"><img src="/assets/img/smallDelete.gif"/></button>
+                             <input type="hidden" name="deletebutton"/>
+                             </form>'.
+                             '<hr><br>';
+                    if(isset($_POST['deletebutton'])){
+                        
+                    }
+                    unset($_POST['deletebutton']);
 				}
 			}
 
