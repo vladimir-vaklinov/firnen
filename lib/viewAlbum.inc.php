@@ -77,6 +77,7 @@ class viewAlbum
 
 			$q=$db->query("SELECT * FROM `photos` WHERE `aid`='".$aid."' ORDER BY `phid` DESC LIMIT ".$page);
 			if($db->num_rows($q)>0){
+
 				$result.='
 				<div id="view-album-blk">
 					<div id="view-album-block">';
@@ -109,13 +110,12 @@ class viewAlbum
         </div>
 		<div id="comment-list">';
 
-
-		$q=$db->query("SELECT * FROM `comments` WHERE `aid`='".$aid."' ORDER BY `cdate` DESC");
-		if($db->num_rows($q)>0){
-			while($a=$db->fetch_array($q)){
-				$result.=$a['uname'].'<br/>'.$a['comment'].'<br/>'.date('Y/m/d.',$a['cdate']).'<br/><br/>';
+			$q=$db->query("SELECT * FROM `comments` WHERE `aid`='".$aid."' ORDER BY `cdate` DESC");
+			if($db->num_rows($q)>0){
+				while($a=$db->fetch_array($q)){
+					$result.=$a['uname'].'<br/>'.$a['comment'].'<br/>'.date('Y/m/d.',$a['cdate']).'<br/><br/>';
+				}
 			}
-		}
 
 		$result.='
 		</div>';

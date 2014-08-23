@@ -12,7 +12,7 @@ $GLOBALS['html']='<!DOCTYPE html>
 <link rel="stylesheet" href="/assets/css/signup.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/css/myalbums.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/css/profile.css" type="text/css" media="all" />
-<link rel="stylesheet" href="/assets/css/publiccontentblock.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/public.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
 </head>
 <body>
