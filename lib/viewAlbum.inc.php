@@ -12,7 +12,7 @@ class viewAlbum{
 
     public function contents(){
         global $db;
-        
+
         $aid=0;
         if(isset($_GET['task_1'])&&(is_numeric($_GET['task_1']))){
             $aid=intval($_GET['task_1']);
@@ -50,29 +50,46 @@ class viewAlbum{
         <div id="view-album-blk">';
         $q=$db->query("SELECT * FROM `photos` WHERE `aid`='".$aid."' ORDER BY `phid` DESC LIMIT ".$page);
         if($db->num_rows($q)>0){
+            $result.='<div id="view-album-block">';
             while($a=$db->fetch_array($q)){
 
                 $image='/photos/'.$a['uid'].'/t_'.$a['filename'];
 
-                $result.='	<div id="view-album-block">
+                $result.='
 					<a href="/photo/'.$a['phid'].'/" class="aimgi">
 							<img src="'.$image.'" alt="'.$a['name'].'"/>
-						</a>
-				</div>';
+						</a><br>';
+
             }
         }
         $result.='
         </div>
+        </div>
+        <div>
         <h2 id="view-album-name">'.$albumname.'</h2>
         </div>
-		<div id=comment-block>
-		<div id=comment-field>
-		<form method=post>
-            <textarea name="comments-field" id="comment-text" placeholder:"Write a comment..."></textarea>
-            <input type="submit" value="Comment" id="comment-button"/>
-            </form></div>';
+		<div id="comment-block">
+        <form method="post">
+        <p>
+          <input type="text" name="name" id="comment-uname" value="" placeholder="Your Name..." />
+        </p>
+        <p>
+           <textarea name="comment" placeholder="Write a comment..." id="comment-text"></textarea>
+        </p>
+        <p>
+            <button type="submit" id="comment-button">Comment</button>
+        </p>
+        <input type="hidden" name="action" value="addcomment"/>
+        </form>
+        ';
+        if(isset($_POST['action'])){
+        $text=$_POST['comment'];
+        $aname=$_POST['name'];
+        $q=$db->query("INSERT INTO `comments` (`aid`,`uname`,`comment`,'cdate')
+					   VALUES ('".$aid."','".$aname."','".$text."','".time()."') ");
+        }
 
-	    $result.='</div>';
+	    $result.='</div> </div>';
 
 
         return $result;
