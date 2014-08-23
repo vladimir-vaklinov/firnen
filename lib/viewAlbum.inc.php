@@ -16,6 +16,7 @@ class viewAlbum
 	 * <h1> Action on the page </h1>
 	 *
 	 */
+
 	public function actions(){
 		global $db;
 
