@@ -12,9 +12,7 @@ class viewAlbum{
 
     public function contents(){
         global $db;
-
-        $result='';
-
+        
         $aid=0;
         if(isset($_GET['task_1'])&&(is_numeric($_GET['task_1']))){
             $aid=intval($_GET['task_1']);
@@ -68,9 +66,14 @@ class viewAlbum{
         <h2 id="view-album-name">'.$albumname.'</h2>
         </div>
 		<div id=comment-block>
+		<div id=comment-field>
+		<form method=post>
             <textarea name="comments-field" id="comment-text" placeholder:"Write a comment..."></textarea>
             <input type="submit" value="Comment" id="comment-button"/>
-	    </div>';
+            </form></div>';
+
+	    $result.='</div>';
+
 
         return $result;
 
