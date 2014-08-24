@@ -61,16 +61,21 @@ class signUp
 				$email=filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
 				$password=filter_var($_POST['password'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
 
-				$q=$db->query("SELECT * FROM `users` WHERE `email`='".$email."' AND `state`='0' ");
+				$q=$db->query("SELECT * FROM `users` WHERE `email`='".$email."' ");
 				if($db->num_rows($q)>0){
 					while($a=$db->fetch_array($q)){
-						if(md5($password)==$a['password']){
-							$_SESSION['user']=array('id'=>$a['uid'], 'fname'=>$a['fname'], 'lname'=>$a['lname'], 'email'=>$a['email']);
-							@header("Location:/");
-							$this->actionstate='thankyou';
-							$this->successmsg='Your are now logged in successfully';
+
+						if($a['state'] == 1){
+							$this->errormsg='<div class="errormsg">Yout account is locked.</div>';
 						}else{
-							$this->errormsg='<div class="errormsg">This password does not match.</div>';
+							if(md5($password)==$a['password']){
+								$_SESSION['user']=array('id'=>$a['uid'], 'fname'=>$a['fname'], 'lname'=>$a['lname'], 'email'=>$a['email']);
+								@header("Location:/");
+								$this->actionstate='thankyou';
+								$this->successmsg='Your are now logged in successfully';
+							}else{
+								$this->errormsg='<div class="errormsg">This password does not match.</div>';
+							}
 						}
 					}
 				}else{

@@ -12,17 +12,11 @@ $GLOBALS['html']='<!DOCTYPE html>
 <link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
 </head>
 <body>
-<header>
-
-</header>
 
 <section class="contentblock">
 	'.$GLOBALS['contentblock'].'
 </section>
 
-<footer>
-
-</footer>
 </body>
 </html>
 ';
