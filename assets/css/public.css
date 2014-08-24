@@ -1,10 +1,9 @@
-#publicphotos {
+#publicphotos{
 	width:965px;
 	padding:29px 0 29px 35px;
-
 }
 
-#publicphotos h1 {
+#publicphotos h1{
 	display:block;
 	width:100%;
 	height:20px;
@@ -14,7 +13,7 @@
 	font-weight:normal;
 }
 
-#p-albums-items {
+#p-albums-items{
 	display:block;
 	width:100%;
 	padding-top:10px;
@@ -24,7 +23,7 @@
 	flex-wrap:wrap;
 }
 
-.p-photos-block {
+.p-photos-block{
 	width:220px;
 	height:235px;
 	border-right:17px solid #FFF;
@@ -32,7 +31,7 @@
 	background-color:#CBCBD0;
 }
 
-.p-photos-block a.aimgi {
+.p-photos-block a.aimgi{
 	display:block;
 	width:204px;
 	height:153px;
@@ -40,18 +39,18 @@
 	background-color:#B6B7BF;
 }
 
-.p-photos-block a.aimgi:hover {
+.p-photos-block a.aimgi:hover{
 	background-color:#F16C65;
 }
 
-.p-photos-block .p-photos-inf {
+.p-photos-block .p-photos-inf{
 	display:block;
 	width:100%;
 	height:20px;
 	padding-top:5px;
 }
 
-.p-photos-block .p-photos-inf strong {
+.p-photos-block .p-photos-inf strong{
 	display:block;
 	width:90%;
 	padding-left:5px;
@@ -59,7 +58,7 @@
 	color:#6A738F;
 }
 
-.p-photos-block .p-photos-inf em {
+.p-photos-block .p-photos-inf em{
 	display:block;
 	width:60%;
 	padding-left:5px;
@@ -70,12 +69,12 @@
 
 /* ***************** VIEW PHOTOS ************************ */
 
-#viewphoto {
+#viewphoto{
 	width:965px;
 	padding:29px 0 29px 35px;
 }
 
-#viewphoto h1.viewphoto-album-name {
+#viewphoto h1.viewphoto-album-name{
 	display:block;
 	width:100%;
 	height:60px;
@@ -86,14 +85,14 @@
 	font-weight:normal;
 }
 
-#viewphoto h1.viewphoto-album-name a {
+#viewphoto h1.viewphoto-album-name a{
 	color:#6A738F;
 	font-size:1.86em;
 	font-weight:normal;
 	text-decoration:none;
 }
 
-#viewphoto h2.viewphoto-username {
+#viewphoto h2.viewphoto-username{
 	display:block;
 	width:100%;
 	height:30px;
@@ -103,7 +102,7 @@
 	font-weight:normal;
 }
 
-#viewphoto h2.viewphoto-username img {
+#viewphoto h2.viewphoto-username img{
 	display:block;
 	width:20px;
 	height:19px;
@@ -111,25 +110,25 @@
 	float:left;
 }
 
-#view-photo-blk {
+#view-photo-blk{
 	width:930px;
 	height:605px;
 	background-color:#CFCFD4;
 }
 
-#view-photo-blk a {
+#view-photo-blk a{
 	display:block;
 	width:63px;
 	height:588px;
 	background-color:#CFCFD4;
 }
 
-#p-photos-block-arr-left {
+#p-photos-block-arr-left{
 	background:#CFCFD4 url(/assets/img/big_arr_left.jpg) no-repeat center center;
 	float:left;
 }
 
-#view-photo-blk img {
+#view-photo-blk img{
 	display:block;
 	width:784px;
 	height:588px;
@@ -137,12 +136,12 @@
 	float:left;
 }
 
-#p-photos-block-arr-right {
+#p-photos-block-arr-right{
 	background:#CFCFD4 url(/assets/img/big_arr_right.jpg) no-repeat center center;
 	float:right;
 }
 
-h2#p-photo-name {
+h2#p-photo-name{
 	display:block;
 	width:100%;
 	height:60px;
@@ -155,13 +154,12 @@ h2#p-photo-name {
 }
 
 /* ******************* ALBUMS ******************* */
-#albums-blk {
+#albums-blk{
 	width:965px;
 	padding:29px 0 29px 35px;
-
 }
 
-#albums-blk h2 {
+#albums-blk h2{
 	display:block;
 	width:100%;
 	height:20px;
@@ -169,7 +167,7 @@ h2#p-photo-name {
 	text-align:left;
 }
 
-#albums-blk #albums-blk-items {
+#albums-blk #albums-blk-items{
 	display:block;
 	width:100%;
 	padding-top:10px;
@@ -179,7 +177,7 @@ h2#p-photo-name {
 	flex-wrap:wrap;
 }
 
-.album-block {
+.album-block{
 	width:220px;
 	height:220px;
 	border-right:17px solid #FFF;
@@ -187,7 +185,7 @@ h2#p-photo-name {
 	background-color:#CBCBD0;
 }
 
-.album-block a.aimgi {
+.album-block a.aimgi{
 	display:block;
 	width:204px;
 	height:153px;
@@ -195,19 +193,19 @@ h2#p-photo-name {
 	background-color:#B6B7BF;
 }
 
-.album-block a.aimgi:hover {
+.album-block a.aimgi:hover{
 	background-color:#F16C65;
 }
 
 /* ******************* INSIDE ALBUM ******************* */
-#view-album {
+#view-album{
 	display:block;
 	width:965px;
 	min-height:400px;
 	padding:29px 0 10px 35px;
 }
 
-#view-album-username {
+#view-album-username{
 	display:block;
 	width:100%;
 	height:30px;
@@ -217,12 +215,12 @@ h2#p-photo-name {
 	font-weight:normal;
 }
 
-#view-album-name {
+#view-album-name{
 	color:black;
 	padding-top:10px;
 }
 
-#view-album-username img {
+#view-album-username img{
 	display:block;
 	width:20px;
 	height:19px;
@@ -230,7 +228,7 @@ h2#p-photo-name {
 	float:left;
 }
 
-#view-album-blk {
+#view-album-blk{
 	display:block;
 	width:950px;
 	background-color:#FFF;
@@ -240,20 +238,20 @@ h2#p-photo-name {
 	flex-wrap:wrap;
 }
 
-#view-album-blk a {
+#view-album-blk a{
 	display:block;
 	width:220px;
 	height:165px;
 	border-right:17px solid #FFF;
 	border-bottom:16px solid #FFF;
 }
-#view-album-blk a img {
+#view-album-blk a img{
 	display:block;
 	width:220px;
 	height:165px;
 }
 
-#comment-block {
+#comment-block{
 	background-color:#d75650;
 	width:430px;
 	height:400px;
@@ -270,7 +268,7 @@ h2#p-photo-name {
 	float:none;
 }
 
-#comment-text {
+#comment-text{
 	width:100%;
 	height:200px;
 	padding:2px;
@@ -304,7 +302,7 @@ h2#p-photo-name {
 	float:left;
 }
 
-#comment-button {
+#comment-button{
 	width:100%;
 	height:30px;
 	background:#FFF;
@@ -313,7 +311,7 @@ h2#p-photo-name {
 	border-radius:5px;
 }
 
-#comment-uname {
+#comment-uname{
 	margin-top:20px;
 	width:300px;
 	height:25px;
@@ -321,26 +319,26 @@ h2#p-photo-name {
 	border:1px solid #000000;
 }
 
-#comment-list {
+#comment-list{
 	display:block;
 	width:600px;
 	padding-bottom:20px;
 	margin:0 auto;
 }
 
-#comment-list .full-comment {
+#comment-list .full-comment{
 	display:block;
 	width:100%;
 	margin-bottom:15px;
 }
-#comment-list .full-comment-name {
+#comment-list .full-comment-name{
 	display:block;
 	color:#F16C65;
 	font-weight:bold;
 	font-size:15px;
 }
 
-#comment-list .full-comment-date {
+#comment-list .full-comment-date{
 	display:block;
 	font-size:15px;
 	font-weight:bold;
@@ -349,4 +347,31 @@ h2#p-photo-name {
 #comment-list .full-comment-comment{
 	width:300px;
 	margin:0 auto;
+}
+#connect{
+	float:right;
+	display:inline-block;
+	margin-right:30px;
+}
+#connect a{
+	background:url(/assets/img/icons.png) no-repeat;
+	display:inline-block;
+	height:30px;
+	width:30px;
+	margin:0 10px;
+}
+#connect a.googleplus{
+	background-position:0 -40px;
+}
+#connect a.twitter{
+	background-position:0 -80px;
+}
+#connect a.facebook:hover{
+	background-position:-40px 0;
+}
+#connect a.googleplus:hover{
+	background-position:-40px -40px;
+}
+#connect a.twitter:hover{
+	background-position:-40px -80px;
 }
