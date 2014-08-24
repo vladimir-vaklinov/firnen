@@ -192,6 +192,10 @@ h2#p-photo-name{
     font-size:1.13em;
     font-weight:normal;
 }
+#view-album-name{
+    color:black;
+    padding-top:10px;
+}
 #view-album-username img{
     display:block;
     width:20px;
@@ -201,11 +205,10 @@ h2#p-photo-name{
 }
 #view-album-blk{
     width:930px;
-    height:405px;
     background-color:#FFF;
+    float:left;
 }
 #view-album-block{
-
 }
 
 #view-album-block img{
@@ -217,15 +220,21 @@ h2#p-photo-name{
 }
 
 #comment-block{
-    background-color:#1B1F2E;
-    width:930px;
-    height:200px;
+    background-color: #d75650;
+    width:430px;
+    height:350px;
+    margin:20px 0 30px 240px;
+    float:left;
+    text-align:center;
+    border-radius:5px;
 }
 
 #comment-text{
     margin:10px auto 0 auto;
     width:300px;
-    height: 80px;
+    height: 200px;
+    border-radius: 5px;
+    border:1px solid #000000;
 }
 #comment-button{
     width:300px;
@@ -233,11 +242,14 @@ h2#p-photo-name{
     background: #FFF;
     border:1px solid black;
     font-weight:bold;
+    border-radius: 5px;
 }
 #comment-uname{
     margin-top:20px;
     width:300px;
     height:25px;
+    border-radius: 5px;
+    border:1px solid #000000;
 }
 #comment-list{
     width:600px;
@@ -270,4 +282,7 @@ hr{
 #full-comment{
     width:300px;
     margin:0 auto;
+}
+#hidden{
+    visibility: hidden;
 }

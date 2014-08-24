@@ -53,7 +53,7 @@ class viewAlbum
 
 		$albumname='';
 		$username='';
-		$page=10;
+		$page=100;
 
 		$q=$db->query("SELECT *,IFNULL( (SELECT `filename` FROM `photos` WHERE `photos`.`aid`=`albums`.`aid`
 						ORDER BY `phid` DESC LIMIT 1), '') AS `photo` FROM `albums` WHERE `aid`='".$aid."' ");
@@ -81,7 +81,7 @@ class viewAlbum
 
 				$result.='
 				<div id="view-album-blk">
-					<div id="view-album-block">';
+					<div id="view-album-block"> ';
 					while($a=$db->fetch_array($q)){
 
 						$image='/photos/'.$a['uid'].'/t_'.$a['filename'];
@@ -107,8 +107,8 @@ class viewAlbum
 					<input type="hidden" name="action" value="addcomment"/>
 				</form>
 			</div>
+            </div>
 
-        </div>
 		<div id="comment-list">';
 
 			$q=$db->query("SELECT * FROM `comments` WHERE `aid`='".$aid."' ORDER BY `cdate` DESC");
@@ -122,13 +122,13 @@ class viewAlbum
                              </form>'.
                              '<hr><br>';
                     if(isset($_POST['deletebutton'])){
-                        
+
                     }
                     unset($_POST['deletebutton']);
 				}
 			}
 
-		$result.='
+		$result.='<input type="text" id="hidden"/>
 		</div>';
 
 
