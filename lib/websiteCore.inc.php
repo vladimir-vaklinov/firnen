@@ -22,6 +22,8 @@ class websiteCore
 
 	public function __construct()
 	{
+		global $db;
+
 		/**
 		 * Here we trim all POST strings
 		 */
@@ -33,6 +35,22 @@ class websiteCore
 		 */
 		if(isset($_POST['search'])&&!empty($_POST['search']))
 			$GLOBALS['searchstr']=filter_var($_POST['search'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+
+
+		/**
+		 * Create captcha code if not set
+		 */
+		if(!isset($_SESSION['captcha123'])||!isset($_SESSION['captcha123']['img'])){
+			$_SESSION['captcha123']=array();
+			$rnd=(integer)rand(1, 50)+rand(1, 50);
+			$q=$db->query("SELECT * FROM `captcha` LIMIT ".$rnd.",1");
+			if($db->num_rows($q)>0){
+				while($a=$db->fetch_array($q)){
+					$_SESSION['captcha123']['img']=$a['filename'];
+					$_SESSION['captcha123']['code']=$a['code'];
+				}
+			}
+		}
 
 	}
 
@@ -57,9 +75,9 @@ class websiteCore
 		 * Checking if some of the menus is selected and it is - we
 		 * mark it as selected
 		 */
-		if(isset($_GET['task_0'])&&(in_array($_GET['task_0'],array('gallery','photo'))) )
+		if(isset($_GET['task_0'])&&(in_array($_GET['task_0'], array('gallery', 'photo'))))
 			$markAsActive[0]=$sel;
-		if(isset($_GET['task_0'])&&(in_array($_GET['task_0'],array('albums','album'))) )
+		if(isset($_GET['task_0'])&&(in_array($_GET['task_0'], array('albums', 'album'))))
 			$markAsActive[1]=$sel;
 		if(isset($_GET['task_0'])&&($_GET['task_0']=='authors'))
 			$markAsActive[2]=$sel;
@@ -191,6 +209,29 @@ class websiteCore
 		$ukey=str_replace('$1$', '', $ukey);
 		$ukey=strtolower(substr(preg_replace('/[^A-Za-z1-9]/', '', $ukey), 0, $len));
 		return $ukey;
+	}
+
+
+	/**
+	 * <h1> Update Captcha </h1>
+	 * Generate new captcha code , and new image
+	 *
+	 * @return bool
+	 */
+	public function updateCapcha()
+	{
+		global $db;
+
+		$_SESSION['captcha123']=array();
+		$rnd=(integer)rand(1, 50)+rand(1, 50);
+		$q=$db->query("SELECT * FROM `captcha` LIMIT ".$rnd.",1");
+		if($db->num_rows($q)>0){
+			while($a=$db->fetch_array($q)){
+				$_SESSION['captcha123']['img']=$a['filename'];
+				$_SESSION['captcha123']['code']=$a['key'];
+			}
+		}
+		return true;
 	}
 
 }
