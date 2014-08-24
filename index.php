@@ -133,6 +133,7 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='photo')){
 
 }
 
+
 if(isset($_GET['task_0'])&&($_GET['task_0']=='albums')){
 
 	include(__DIR__."/lib/publicAlbums.inc.php");
@@ -145,7 +146,6 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='album')){
 
 	include(__DIR__."/lib/viewAlbum.inc.php");
 	$va=new viewAlbum();
-	$va->actions();
 	$GLOBALS['contentblock']=$va->contents();
 
 }

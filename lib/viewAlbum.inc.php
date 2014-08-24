@@ -17,7 +17,7 @@ class viewAlbum
 	 *
 	 */
 
-	public function actions()
+	public function __construct()
 	{
 		global $db, $ws;
 
@@ -29,7 +29,7 @@ class viewAlbum
 			$name=mb_substr($name, 0, 150, $GLOBALS['encoding']);
 			$comment=filter_var($_POST['comment'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
-			$db->query("INSERT INTO `comments` (`aid`,`uname`,`comment`,`cdate`)
+			$q=$db->query("INSERT INTO `comments` (`aid`,`uname`,`comment`,`cdate`)
 				   VALUES ('".$aid."','".$name."','".$comment."','".time()."') ");
 
 			$ws->updateCapcha();

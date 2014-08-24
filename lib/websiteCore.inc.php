@@ -240,7 +240,7 @@ class websiteCore
 		if($db->num_rows($q)>0){
 			while($a=$db->fetch_array($q)){
 				$_SESSION['captcha123']['img']=$a['filename'];
-				$_SESSION['captcha123']['code']=$a['key'];
+				$_SESSION['captcha123']['code']=$a['code'];
 			}
 		}
 		return true;
