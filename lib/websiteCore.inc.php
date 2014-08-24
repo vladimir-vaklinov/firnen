@@ -52,6 +52,18 @@ class websiteCore
 			}
 		}
 
+		/**
+		 * Settings for the website
+		 */
+		$q=$db->query("SELECT * FROM `settings` ");
+		if($db->num_rows($q)>0){
+			while($a=$db->fetch_array($q)){
+				$GLOBALS['pageTitle']=trim($a['site_title']);
+				$GLOBALS['pageKeywords']=trim($a['site_keywords']);
+				$GLOBALS['pageDescription']=trim($a['site_description']);
+			}
+		}
+
 	}
 
 

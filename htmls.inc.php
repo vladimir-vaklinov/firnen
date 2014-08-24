@@ -4,8 +4,10 @@ $GLOBALS['html']='<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<title>'.trim($GLOBALS['pageTitle']).'</title>
+<title>'.$GLOBALS['pageTitle'].'</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta name="keywords" content="'.$GLOBALS['pageKeywords'].'" />
+<meta name="description" content="'.$GLOBALS['pageDescription'].'" />
 <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon" />
 <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="/assets/css/main.css" type="text/css" media="all" />

@@ -71,7 +71,13 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='users')){
 	$contents=$ua->contents();
 
 }
+if(isset($_GET['task_0'])&&($_GET['task_0']=='settings')){
 
+	include(__DIR__."/lib/settingsAdmin.inc.php");
+	$sa = new settingsAdmin();
+	$contents=$sa->contents();
+
+}
 
 
 

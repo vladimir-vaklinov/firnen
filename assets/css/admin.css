@@ -94,6 +94,30 @@ h1#admin-content-title{
 	font-weight:bold;
 	font-size:13px;
 }
+.formblk{
+	display:block;
+	width:100%;
+	min-height:40px;
+	padding-top:10px;
+	padding-bottom:10px;
+	float:left;
+}
+.formblk form p{
+	display:block;
+	width:100%;
+	padding-bottom:4px;
+	float:left;
+}
+.formblk form p label{
+	display:block;
+	width:40%;
+	padding-bottom:4px;
+	float:left;
+}
+.formblk form p input,
+.formblk form p textarea{
+	width:55% !important;
+}
 .btn{
 	width:auto;
 	padding-left:5px;

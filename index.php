@@ -38,7 +38,10 @@ for($g=0; $g<count($var); $g++){
 	}
 }
 
-$GLOBALS['pageTitle']="CONTENT";
+$GLOBALS['pageTitle']="FIRNEN";
+$GLOBALS['pageKeywords']="FIRNEN";
+$GLOBALS['pageDescription']="FIRNEN";
+
 $GLOBALS['contentblock']="CONTENT";
 $GLOBALS['searchstr']="";
 $GLOBALS['navlinks']="";
