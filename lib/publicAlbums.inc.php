@@ -6,13 +6,14 @@
  * @version 0.4
  * @since 2014-08-22
  */
+class publicAlbums
+{
 
-class publicAlbums{
 
+	public function contents()
+	{
 
-	public function contents(){
-
-		global $db,$ws;
+		global $db, $ws;
 
 		$result='';
 
@@ -29,11 +30,11 @@ class publicAlbums{
 				<h2>Albums:</h2>
 				<div id="albums-blk-items">';
 
-				while($a=$db->fetch_array($q)){
+			while($a=$db->fetch_array($q)){
 
-					$result.=$ws->albumPreview($a['aid']);
+				$result.=$ws->albumPreview(0, $a['aid'], $a['uid'], $a['photo'], $a['name'], $a['created']);
 
-				}
+			}
 
 			$result.='
 				</div>

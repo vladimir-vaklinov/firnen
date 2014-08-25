@@ -38,7 +38,7 @@ class byAuthor
 
 					while($b=$db->fetch_array($qin)){
 
-						$result.=$ws->albumPreview($b['aid']);
+						$result.=$ws->albumPreview(0,$b['aid'],$b['uid'],$b['photo'],$b['name'],$b['created']);
 
 					}
 

@@ -71,6 +71,13 @@ class viewPhoto
 			}
 		}
 
+		include(__DIR__.'/../lib/comments.inc.php');
+		$comm = new comments();
+		$comm->phid=$phid;
+		$comm->actions();
+		$commentsForm=$comm->displayAddCommentForm();
+		$commentsList=$comm->displayComments();
+
 
 		$result='
 		<div id="viewphoto">
@@ -86,10 +93,11 @@ class viewPhoto
 				</div>
 
 			</div>
-
 			<h2 id="p-photo-name">'.$photoname.'</h2>
-
+			'.$commentsForm.'
+			'.$commentsList.'
 		</div>';
+
 
 
 		return $result;

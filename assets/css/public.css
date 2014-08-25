@@ -259,6 +259,9 @@ h2#p-photo-name{
 	text-align:center;
 	border-radius:5px;
 }
+#comment-block-title{
+	padding-top:10px;
+}
 #comment-block p{
 	display:block;
 	width:80%;
