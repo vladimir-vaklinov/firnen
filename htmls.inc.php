@@ -26,7 +26,7 @@ $GLOBALS['html']='<!DOCTYPE html>
 		<div id="search-form">
 			<form method="post" action="/search/">
 				<input type="text" name="search" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150" />
-				<button type="submit" name="submit">Search</button>
+				<input type="submit" name="submit" placeholder="Search" />
 			</form>
 		</div>
 		<nav id="menu">

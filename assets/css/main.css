@@ -32,44 +32,49 @@ header{
 	vertical-align:top;
 }
 #logoarea{
-	display:block;
-	width:40%;
-	padding-top:35px;
-	padding-left:35px;
-	padding-bottom:32px;
+	display:block;	
+	padding:35px; 	
 	float:left;
 }
 #logoarea a{
-	display:block;
-	width:209px;
-	height:33px;
+	display:block;	
 }
 
 #search-form{
 	display:block;
-	width:40%;
-	height:30px;
-	padding-top:6px;
-	padding-right:34px;
+	width:20%;		
 	text-align:right;
 	float:right;
+	padding:0;
+	color:#CCCCCC;
+	padding:0.3rem 0 0.2rem 0.4rem;	
+	background-color:#1B1F2E;
+	border:1px solid rgba(255,255,255,0.15);
+	border-radius:6px;
 }
 #search-form input{
 	display:inline-block;
-	width:150px;
-	padding:2px;
-	font-size:0.9em;
-	color:#CCCCCC;
-	background-color:#393b48;
-	border:1px solid #8088A3;
+	width:85%;	
+	float:left;	
+	font-size:0.95rem;
+	color:#6A738F;	
+	border:none;
+	background-color:#1B1F2E;
+	outline:none;
+	
 }
-#search-form button{
-	display:inline-block;
-	font-size:0.9em;
+#search-form input[type="submit"]{
+	background:transparent url(../img/search-icon.png) no-repeat scroll 0 0;
+	display:inline-block;	
+	color: transparent;
 	border:0;
-	color:#8088A3;
-	background-color:#2D2F3B;
+	border-style: none;   
+	width:22px;
+	height:22px;
+	float:left;	
 	cursor:pointer;
+	opacity:0.7;
+	overflow:hidden;
 }
 #search-form button:hover{
 	color:#CCC;
