@@ -21,7 +21,7 @@ $GLOBALS['html']='<!DOCTYPE html>
 <div id="wrapper">
 	<header>
 		<div id="logoarea">
-			<a href="/"><img src="/assets/img/logo.jpg" alt="FIRNEN Logo" /></a>
+			<a href="/"><img src="/assets/img/firnen-logo.png" alt="FIRNEN Logo" /></a>
 		</div>
 		<div id="search-form">
 			<form method="post" action="/search/">
