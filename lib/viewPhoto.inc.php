@@ -80,9 +80,9 @@ class viewPhoto
 			<div id="view-photo-blk">
 
 				<div id="p-photos-block">
-					<a href="'.$nextphoto.'" id="p-photos-block-arr-left"></a>
+					<a href="'.$nextphoto.'#view-photo-blk" id="p-photos-block-arr-left"></a>
 					<img src="'.$image.'" alt="'.$photoname.'"/>
-					<a href="'.$prevphotos.'" id="p-photos-block-arr-right"></a>
+					<a href="'.$prevphotos.'#view-photo-blk" id="p-photos-block-arr-right"></a>
 				</div>
 
 			</div>

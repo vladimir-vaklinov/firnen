@@ -158,5 +158,14 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='search')){
 
 }
 
+if(isset($_GET['task_0'])&&($_GET['task_0']=='authors')){
+
+	include(__DIR__."/lib/byAuthor.inc.php");
+	$ba=new byAuthor();
+	$GLOBALS['contentblock']=$ba->contents();
+
+}
+
+
 include(__DIR__."/htmls.inc.php");
 print $GLOBALS['html'];
