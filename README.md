@@ -1,5 +1,5 @@
 Fírnen GALLERY
-======
+=========
 
 <p>
 Firnen Gallery SoftUni team project<br/>
@@ -12,7 +12,7 @@ CHANGELOG:
 =========
 <p>
 <ul>
-<li>0.8 Comleted all except albums and ByAuthor. Paging needs to be created.</li>
+<li>0.8 Comleted all except ByAuthor. Paging needs to be created.</li>
 <li>0.7 Comleted all except albums and ByAuthor, admin panel almost ready.</li>
 <li>0.3 Basic version with CSS and HTML.</li>
 <li>0.1 Basic version.</li>
