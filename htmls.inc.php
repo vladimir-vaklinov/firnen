@@ -39,13 +39,15 @@ $GLOBALS['html']='<!DOCTYPE html>
 	</section>
 
 	<footer>
-		<p>
+		<div id="copyright">
+		<p>				
 			All rights reserved &copy; '.date('Y').' &middot;
 			<a href="http://softuni.bg" target="_blank">SoftUni</a> team FIRNEN &middot;
 			<a href="http://validator.w3.org/check?verbose=1&amp;uri=http%3A%2F%2Ffirnen.info%2F" target="_blank">HTML5</a> &amp;
 			<a href="http://jigsaw.w3.org/css-validator/validator?profile=css3&amp;warning=0&amp;uri=http%3A%2F%2Ffirnen.info%2F" target="_blank">CSS3</a> validated
 		</p>
-		<div id="connect">
+		</div>
+		<div id="media">
             <a href="https://www.facebook.com/sharer/sharer.php?u=http://firnen.info/" target="_blank" class="facebook"></a>
             <a href="https://plus.google.com/share?url=http://firnen.info/" target="_blank" class="googleplus"></a>
             <a href="https://twitter.com/home?status=http://firnen.info/" target="_blank" class="twitter"></a>

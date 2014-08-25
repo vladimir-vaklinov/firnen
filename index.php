@@ -7,6 +7,7 @@
  * @version 0.1
  * @since 2014-08-17
  */
+
 header('P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"'); // Special header for easy access to coockies
 header('Content-Type:text/html; charset=utf-8');
 

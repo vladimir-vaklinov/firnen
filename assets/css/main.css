@@ -205,7 +205,7 @@ form.frm p button{
 	margin-top:12px;
 	color:#FFFFFF;
 	border:1px solid #FFFFFF;
-	border-radius:6px 6px 6px 6px;
+	border-radius:6px;
 	background-color:#F16C65;
 	font-size:1.13em;
 	text-decoration:none;
@@ -217,44 +217,52 @@ footer{
 	display:block;
 	width:100%;
 	min-width:1000px;
-	height:62px;
-	padding-top:38px;
-	font-size:1.13em;
+	height:5rem;	
+	font-size:1.13em;	
+	padding:1.2rem 2rem;
 	color:#676B80;
 	background-color:#2D2F3B;
+	box-sizing:border-box;	
 }
-footer p{
-	color:#676B80;
-	padding-left:35px;
-}
-footer p a{
-	color:#676B80;
-}
-
-#connect{
-	float:right;
+footer div#copyright{
+	color:#676B80;	
 	display:inline-block;
-	margin-right:30px;
+	margin:0;
+	box-sizing:border-box;
+	float:left;
 }
-#connect a{
-	background:url(/assets/img/icons.png) no-repeat;
+footer div#copyright p{
+	line-height:3rem;	
+}
+footer div#copyright p a{
+	color:#676B80;
+}
+#media{		
+	float:right;	
+	display:inline-block;	
+	box-sizing:border-box;
+}
+#media a{
+	background:url(/assets/img/sprite.png) no-repeat;
 	display:inline-block;
-	height:30px;
-	width:30px;
-	margin:0 10px;
+	height:35px;
+	width:35px;	
+	margin:0.3rem;
+	border: 1px solid white;	
+	opacity:0.5;
+    border-radius:0.4rem;   
 }
-#connect a.googleplus{
-	background-position:0 -40px;
+#media a.facebook{
+	background-position:-10px -10px;
 }
-#connect a.twitter{
-	background-position:0 -80px;
+#media a.googleplus{
+	background-position:-173px -10px;
 }
-#connect a.facebook:hover{
-	background-position:-40px 0;
+#media a.twitter{
+	background-position:-446px -10px;
 }
-#connect a.googleplus:hover{
-	background-position:-40px -40px;
-}
-#connect a.twitter:hover{
-	background-position:-40px -80px;
+#media a.facebook:hover,
+#media a.googleplus:hover,
+#media a.twitter:hover {
+	opacity:0.9;	
 }
