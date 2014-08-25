@@ -14,8 +14,8 @@ CHANGELOG:
 <ul>
 <li>0.9.1 Comments form added on the photos page.</li>
 <li>0.9 Paging needs to be created.</li>
-<li>0.8 Comleted all except ByAuthor. Paging needs to be created.</li>
-<li>0.7 Comleted all except albums and ByAuthor, admin panel almost ready.</li>
+<li>0.8 Completed all except ByAuthor. Paging needs to be created.</li>
+<li>0.7 Completed all except albums and ByAuthor, admin panel almost ready.</li>
 <li>0.3 Basic version with CSS and HTML.</li>
 <li>0.1 Basic version.</li>
 </ul>
