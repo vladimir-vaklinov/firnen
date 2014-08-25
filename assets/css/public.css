@@ -197,6 +197,13 @@ h2#p-photo-name{
 	background-color:#F16C65;
 }
 
+#like{
+	background:url(../images/like_it.jpg) left center no-repeat;
+}
+#dislike{
+	background:url(../images/dont_like.jpg) left center no-repeat;
+}
+	
 /* ******************* INSIDE ALBUM ******************* */
 #view-album{
 	display:block;

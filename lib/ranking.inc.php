@@ -20,41 +20,39 @@ class votes
 	{
 
 		global $db, $ws;
+		if(isset($_POST['action'])&&($_POST['action']=='vote')){
 
-		if(isset($_POST['action'])&&($_POST['action']=='like')){
-
-			$name=filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
-			// tuk kak da vkaram $vote v bazata i kak da proverq kolko e tekushtoto
-			$vote++; 
-
-			$db->query("INSERT INTO `likes` (`aid`,`uname`,`likes`,`cdate`)
-				   VALUES ('".$this->aid."','".$name."','".$vote."','".time()."') ");
-
-			$ws->updateCapcha();
-		}
-
+			$likes=1;$dislikes=0;
+			if(isset($_POST['likes']) && ($_POST['likes'] == 2)){
+				$likes=0; $dislikes=1;
+			}
+			$db->query("INSERT INTO `votes` (`aid`,`ip`,`likes`,`dislikes`)
+			VALUES ('".$this->aid."','".ip2long($_SERVER['REMOTE_ADDR'])."','".$likes."','".$dislikes."') ");
+		}	
 	}
 
 	/**
 	 * Display votes per album
 	 */
-	public function displayVotes()
-	{
+	public function displayVotes(){
+		$vote=0;$dislikes=0;
 
 		$result='
 		<div id="vote-block">
 			<h2 id="vote-block-title">Like this album:</h2>
 			<form method="post" action="?#vote-block" name="like">
-				<input type="submit" src="../assets/img/like_it.jpg" name="submit" alt="submit" />
-				<p class="votes">$vote</p>
-				<input type="hidden" name="action" value="like"/>
+				<p class="current-votes"><strong>Likes:</strong> '.$vote.' | <strong>Dislikes:</strong> '.$dislikes.'</p>
+				<p>
+					<input type="radio" name="likes" value="1" onclick="this.form.submit()" id="like"/>
+					<input type="radio" name="likes" value="2" onclick="this.form.submit()" id="dislike"/>
+				</p>
+				<input type="hidden" name="action" value="vote"/>
 				<input type="hidden" name="aid" value="'.$this->aid.'"/>
 			</form>
 		</div>';
 
-		return $result;
+	  return $result;
 	}
-
 
 
 }
