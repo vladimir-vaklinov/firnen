@@ -12,7 +12,7 @@ class publicAlbums{
 
 	public function contents(){
 
-		global $db;
+		global $db,$ws;
 
 		$result='';
 
@@ -31,20 +31,7 @@ class publicAlbums{
 
 				while($a=$db->fetch_array($q)){
 
-					$image='/assets/img/no-image.jpg';
-					if(!empty($a['photo'])){
-						$image='/photos/'.$a['uid'].'/t_'.$a['photo'];
-					}
-					$result.='
-					<div class="album-block">
-						<a href="/album/'.$a['aid'].'/" class="aimgi">
-							<img src="'.$image.'" alt="'.$a['name'].'"/>
-						</a>
-						<div class="albums-inf">
-							<strong>'.$a['name'].'</strong>
-						</div>
-					</div>
-					';
+					$result.=$ws->albumPreview($a['aid']);
 
 				}
 

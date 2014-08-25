@@ -13,7 +13,7 @@ class publicPhotos
 
 	public function showAll()
 	{
-		global $db;
+		global $db,$ws;
 
 		$page=0;$resultperpage=30;
 
@@ -29,19 +29,7 @@ class publicPhotos
 			if($db->num_rows($q)>0){
 				while($a=$db->fetch_array($q)){
 
-					$image='/photos/'.$a['uid'].'/t_'.$a['filename'];
-
-					$result.='
-					<div class="p-photos-block">
-						<a href="/photo/'.$a['phid'].'/" class="aimgi">
-							<img src="'.$image.'" alt="'.$a['name'].'"/>
-						</a>
-						<div class="p-photos-inf">
-							<strong class="p-photos-name">'.$a['name'].'</strong>
-							<strong class="p-photos-name">by Author (link)</strong>
-							<em class="p-photos-date">'.date('Y/m/d',$a['created']).'</em>
-						</div>
-					</div>';
+					$result.=$ws->photoPreview(0,$a['phid'],$a['uid'],$a['filename'],$a['name'],$a['created']);
 
 				}
 			}

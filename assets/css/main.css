@@ -230,3 +230,31 @@ footer p{
 footer p a{
 	color:#676B80;
 }
+
+#connect{
+	float:right;
+	display:inline-block;
+	margin-right:30px;
+}
+#connect a{
+	background:url(/assets/img/icons.png) no-repeat;
+	display:inline-block;
+	height:30px;
+	width:30px;
+	margin:0 10px;
+}
+#connect a.googleplus{
+	background-position:0 -40px;
+}
+#connect a.twitter{
+	background-position:0 -80px;
+}
+#connect a.facebook:hover{
+	background-position:-40px 0;
+}
+#connect a.googleplus:hover{
+	background-position:-40px -40px;
+}
+#connect a.twitter:hover{
+	background-position:-40px -80px;
+}

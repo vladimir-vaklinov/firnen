@@ -246,6 +246,112 @@ class websiteCore
 		return true;
 	}
 
+
+	/**
+	 * <h1> Album Preview </h1>
+	 * Use this method to display the small album block / preview.
+	 *
+	 *
+	 * @param int $searchID Integer ID of the album, if > 0 the rest of the parameters are not required
+	 * @param int $aid Integer  ID of the album.
+	 * @param int $uid Integer  ID of the User
+	 * @param string $photo String If not empty - the first photo in the album will be shown.
+	 * @param string $name String Name of the album
+	 * @param int $created Integer Date - created
+	 * @return string
+	 */
+	public function albumPreview($searchID=0, $aid=0, $uid=0, $photo='', $name='', $created=0)
+	{
+
+
+		if($searchID>0){
+
+			global $db;
+
+			$q=$db->query("SELECT *,
+		             IFNULL(
+		                (SELECT `filename` FROM `photos` WHERE `photos`.`aid`=`albums`.`aid`
+		                    ORDER BY `phid` DESC LIMIT 1), '') AS `photo`
+						FROM `albums` WHERE `aid`='".intval($searchID)."' ");
+
+			if($db->num_rows($q)>0){
+				while($a=$db->fetch_array($q)){
+					$aid=$a['aid'];
+					$uid=$a['uid'];
+					$photo=$a['photo'];
+					$name=$a['name'];
+					$created=$a['created'];
+				}
+			}
+		}
+
+		$image='/assets/img/no-image.jpg';
+		if(!empty($photo))
+			$image='/photos/'.$uid.'/t_'.$photo;
+
+		$result='
+			<div class="album-block">
+				<a href="/album/'.$aid.'/" class="aimgi">
+					<img src="'.$image.'" alt="'.$name.' / '.$created.'"/>
+				</a>
+				<div class="albums-inf">
+					<strong>'.$name.'</strong>
+				</div>
+			</div>
+			';
+
+		return $result;
+
+	}
+
+
+	/**
+	 * <h1> Simple Photo preview </h1>
+	 * Use this method to display small photo block ( photo preview ) wherever it's needed.
+	 * That's part of the real OOP.
+	 *
+	 * @param $searchID Integer If > 0 , the rest of the parameters will be ignored, and MySQL search will be performed
+	 * @param $phid Integer ID of the photo
+	 * @param $uid Integer User ID
+	 * @param $filename String Filename
+	 * @param $name String Name of the photo
+	 * @param $created Integer Data - created, unix timestamp
+	 * @return string
+	 */
+	public function photoPreview($searchID=0, $phid=0, $uid=0, $filename='', $name='', $created=0)
+	{
+
+
+		if($searchID>0){
+			global $db;
+			$q=$db->query("SELECT * FROM `photos` WHERE `phid`='".intval($searchID)."' ");
+			if($db->num_rows($q)>0){
+				while($a=$db->fetch_array($q)){
+					$phid=$a['phid'];
+					$uid=$a['uid'];
+					$filename=$a['filename'];
+					$name=$a['name'];
+					$created=$a['created'];
+				}
+			}
+		}
+
+		$result='
+			<div class="p-photos-block">
+				<a href="/photo/'.$phid.'/" class="aimgi">
+					<img src="/photos/'.$uid.'/t_'.$filename.'" alt="'.$name.'"/>
+				</a>
+				<div class="p-photos-inf">
+					<strong class="p-photos-name">'.$name.'</strong>
+					<strong class="p-photos-name">by Author (link)</strong>
+					<em class="p-photos-date">'.date('Y/m/d', $created).'</em>
+				</div>
+			</div>';
+
+		return $result;
+
+	}
+
 }
 
 /**

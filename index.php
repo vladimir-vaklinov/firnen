@@ -150,5 +150,13 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='album')){
 
 }
 
+if(isset($_GET['task_0'])&&($_GET['task_0']=='search')){
+
+	include(__DIR__."/lib/search.inc.php");
+	$ss=new search();
+	$GLOBALS['contentblock']=$ss->contents();
+
+}
+
 include(__DIR__."/htmls.inc.php");
 print $GLOBALS['html'];
