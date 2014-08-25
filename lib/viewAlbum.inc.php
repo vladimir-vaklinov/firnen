@@ -63,12 +63,20 @@ class viewAlbum
 		$commentsForm=$comm->displayAddCommentForm();
 		$commentsList=$comm->displayComments();
 
+		include(__DIR__.'/../lib/ranking.inc.php');
+		$vote = new votes();
+		$vote->aid=$aid;
+		$vote->actionSaveVote();
+		$currentVote=$vote->displayVotes();
 
 		$result='
 		<div id="view-album">
 			<h2 id="view-album-username"><img src="/assets/img/user_ico.png" alt="'.$username.'" />'.$username.'</h2>
 			<div id="view-album-blk">
 				'.$photos.'
+			</div>
+			<div id="show-votes">
+				'.$currentVote.'
 			</div>
 			'.$commentsForm.'
 			'.$commentsList.'
