@@ -7,7 +7,6 @@
  * @version 0.1
  * @since 2014-08-17
  */
-
 header('P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"'); // Special header for easy access to coockies
 header('Content-Type:text/html; charset=utf-8');
 
@@ -54,7 +53,7 @@ include(__DIR__."/lib/websiteCore.inc.php");
 
 if(!isset($_SESSION['user'])||(isset($_GET['task_0'])&&($_GET['task_0']=='logout'))){
 	$_SESSION['user']=array();
-	if(isset($_GET['task_0']) && ($_GET['task_0']=='logout'))
+	if(isset($_GET['task_0'])&&($_GET['task_0']=='logout'))
 		@header("Location:/");
 
 }
@@ -124,7 +123,7 @@ if(isset($_GET['task_0'])&&($_GET['task_0']=='profile')){
 
 if(isset($_GET['task_0'])&&($_GET['task_0']=='photo')){
 
-	if(isset($_GET['task_1']) && is_numeric($_GET['task_1'])){
+	if(isset($_GET['task_1'])&&is_numeric($_GET['task_1'])){
 		include(__DIR__."/lib/viewPhoto.inc.php");
 		$vf=new viewPhoto();
 		$GLOBALS['contentblock']=$vf->content();

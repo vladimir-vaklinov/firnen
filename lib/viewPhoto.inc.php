@@ -72,7 +72,7 @@ class viewPhoto
 		}
 
 		include(__DIR__.'/../lib/comments.inc.php');
-		$comm = new comments();
+		$comm=new comments();
 		$comm->phid=$phid;
 		$comm->actions();
 		$commentsForm=$comm->displayAddCommentForm();
@@ -97,7 +97,6 @@ class viewPhoto
 			'.$commentsForm.'
 			'.$commentsList.'
 		</div>';
-
 
 
 		return $result;

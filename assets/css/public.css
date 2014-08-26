@@ -70,19 +70,17 @@
 /* ***************** VIEW PHOTOS ************************ */
 
 #viewphoto{
-	width:965px;
-	padding:29px 0 29px 35px;
+	width:100%;
+	padding-top:1rem;
 }
 
 #viewphoto h1.viewphoto-album-name{
 	display:block;
 	width:100%;
-	height:60px;
-	line-height:1;
+	line-height:4rem;
+	margin-left:2rem;
 	color:#6A738F;
 	text-align:left;
-	font-size:1.86em;
-	font-weight:normal;
 }
 
 #viewphoto h1.viewphoto-album-name a{
@@ -96,6 +94,7 @@
 	display:block;
 	width:100%;
 	height:30px;
+	margin-left:2rem;
 	color:#2d2f3b;
 	text-align:left;
 	font-size:1.13em;
@@ -111,6 +110,7 @@
 }
 
 #view-photo-blk{
+	margin-left:2rem;
 	width:930px;
 	height:605px;
 	background-color:#CFCFD4;
@@ -142,6 +142,7 @@
 }
 
 h2#p-photo-name{
+	margin-left:2rem;
 	display:block;
 	width:100%;
 	height:60px;
@@ -196,14 +197,31 @@ h2#p-photo-name{
 .album-block a.aimgi:hover{
 	background-color:#F16C65;
 }
-
+#like, #dislike{
+	display:inline-block;
+	width:auto;
+	padding:10px 5px 10px 40px;
+	border:1px solid #919090;
+	border-radius:5px;
+	background:url(/assets/img/like_it.jpg) no-repeat 5px center;
+	text-align:right;
+	font-family:"Calibri", Verdana, Arial, sans-serif;
+	font-size:16px;
+	cursor:pointer;
+}
 #like{
-	background:url(../images/like_it.jpg) left center no-repeat;
+	color:#F16C65;
+	background-image:url(/assets/img/like_it.jpg);
 }
 #dislike{
-	background:url(../images/dont_like.jpg) left center no-repeat;
+	color:#919090;
+	background-image:url(/assets/img/dont_like.jpg);
 }
-	
+#likeForm, #dislikeForm{
+	display:inline-block;
+	padding-right:10px;
+}
+
 /* ******************* INSIDE ALBUM ******************* */
 #view-album{
 	display:block;
@@ -257,21 +275,23 @@ h2#p-photo-name{
 	width:220px;
 	height:165px;
 }
-
+/* ******************* COMMENT BLOCK ******************* */
 #comment-block{
-	background-color:#d75650;
-	width:430px;
-	height:400px;
-	margin:20px 0 30px 240px;
+	background-color:#F16C65;
+	width:100%;
+	height:auto;
+	margin:0;
+	box-sizing:border-box;
+	padding:2rem 1rem;
 	text-align:center;
-	border-radius:5px;
 }
-#comment-block-title{
-	padding-top:10px;
+h2#comment-block-title{
+	color:#FFF;
+	font-size:1.5rem;
 }
 #comment-block p{
 	display:block;
-	width:80%;
+	width:90%;
 	min-height:20px;
 	padding-bottom:10px;
 	margin:0 auto;
@@ -280,14 +300,22 @@ h2#p-photo-name{
 
 #comment-text{
 	width:100%;
-	height:200px;
-	padding:2px;
+	height:180px;
+	padding:0.5rem;
+	color:#FAB4B0;
+	border:0;
 	border-radius:5px;
-	border:1px solid #000000;
+	background-color:#d75650;
+	font-size:1.3em;
+	font-family:inherit;
+	max-width:860px;
 }
 
 #comment-block p.captcha{
-	height:30px;
+	width:90%;
+	box-sizing:border-box;
+	padding:0;
+	margin-left:3.3rem;
 }
 #comment-block p.captcha label{
 	display:block;
@@ -301,37 +329,60 @@ h2#p-photo-name{
 }
 #comment-block p.captcha img{
 	display:block;
-	margin-right:15px;
+	margin-right:1rem;
 	float:left;
+	border:2px solid white;
+	border-radius:5px;
 }
 #comment-block p.captcha input{
 	display:block;
-	width:80px;
-	padding:3px;
+	width:120px;
 	font-size:1.13em;
 	float:left;
+	padding:8px 11px;
+	margin:0;
+	color:#FAB4B0;
+	border:0;
+	border-radius:5px;
+	background-color:#d75650;
 }
 
 #comment-button{
-	width:100%;
-	height:30px;
-	background:#FFF;
-	border:1px solid black;
+	float:right;
+	box-sizing:border-box;
 	font-weight:bold;
-	border-radius:5px;
+	display:inline-block;
+	padding:7px 30px;
+	line-height:1;
+	color:#FFFFFF;
+	border:1px solid #FFFFFF;
+	border-radius:6px;
+	background-color:#F16C65;
+	font-size:1.4em;
+	cursor:pointer;
+	margin:0;
+	opacity:0.7;
+}
+#comment-button:hover{
+	opacity:1;
 }
 
 #comment-uname{
-	margin-top:20px;
-	width:300px;
-	height:25px;
+	display:inline-block;
+	width:100%;
+	margin-top:1rem;
+	padding:8px 11px;
+	color:#FAB4B0;
+	border:0;
 	border-radius:5px;
-	border:1px solid #000000;
+	background-color:#d75650;
+	font-size:1.2em;
+	max-width:855px;
 }
 
 #comment-list{
 	display:block;
-	width:600px;
+	width:100%;
 	padding-bottom:20px;
 	margin:0 auto;
 }
@@ -339,7 +390,11 @@ h2#p-photo-name{
 #comment-list .full-comment{
 	display:block;
 	width:100%;
-	margin-bottom:15px;
+	margin:0.5rem 0;
+	border-bottom:1px solid #eee;
+	text-align:left;
+	padding:0.5rem 4rem;
+	box-sizing:border-box;
 }
 #comment-list .full-comment-name{
 	display:block;
@@ -355,8 +410,8 @@ h2#p-photo-name{
 	color:#FAB4B0;
 }
 #comment-list .full-comment-comment{
-	width:300px;
-	margin:0 auto;
+	width:500px;
+	font-size:1rem;
 }
 
 /* *********************** SEARCH AREA *********************** */
@@ -380,9 +435,9 @@ h2#p-photo-name{
 	text-align:left;
 }
 .search-results-items{
-	display: flex;
-	width: 100%;
-	padding-top: 10px;
+	display:flex;
+	width:100%;
+	padding-top:10px;
 	display:-webkit-flex;
 	display:flex;
 	-webkit-flex-wrap:wrap;

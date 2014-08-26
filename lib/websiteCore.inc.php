@@ -106,13 +106,17 @@ class websiteCore
 				<li id="nav-authors" '.$markAsActive[2].'><a href="/authors/">By Author</a></li>';
 		if(isset($_SESSION['user']['fname'])){
 			$result.='
+			<li id="profile-links">
+			<ul>
 				<li id="nav-profile" '.$markAsActive[4].'><a href="/profile/">
 					<img src="/assets/img/user_ico.png" alt="'.$_SESSION['user']['fname'].'" />'.$_SESSION['user']['fname'].'</a></li>
 				<li id="nav-myalbums" '.$markAsActive[5].'><a href="/myalbums/">My Albums</a></li>
+			</ul>
+			</li>
 			';
 		}else{
 			$result.='
-				<li id="nav-signup" '.$markAsActive[3].'><a href="/signup/">Register / Login</a></li>
+				<li id="nav-signup" '.$markAsActive[3].'><a href="/signup/">Sign Up</a></li>
 			';
 		}
 		return $result;

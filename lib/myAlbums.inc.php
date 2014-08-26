@@ -27,7 +27,8 @@ class myAlbums
 
 		if(isset($_GET['action'])&&($_GET['action']=='delphoto')){
 
-			$aid=0;$filename='deleteme';
+			$aid=0;
+			$filename='deleteme';
 			$q=$db->query("SELECT * FROM `photos`
 							WHERE `uid`='".$_SESSION['user']['id']."' AND `phid`='".intval($_GET['id'])."' ");
 
@@ -49,7 +50,7 @@ class myAlbums
 		if(isset($_POST['action'])&&($_POST['action']=='editfile')){
 
 			if(!empty($_POST['name'])&&isset($_GET['id'])&&is_numeric($_GET['id'])){
-				$name=filter_var($_POST['name'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$name=filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 				$q=$db->query("UPDATE `photos` SET `name`='".$name."'
 				                WHERE `uid`='".$_SESSION['user']['id']."' AND `phid`='".intval($_GET['id'])."'");
@@ -79,7 +80,7 @@ class myAlbums
 			$ws->makeThumbnail($_FILES['file']['tmp_name'], $inpath.'/'.$fileout, 784, 588, 1);
 			if($ws!=false){
 				$aid=intval($_GET['task_1']);
-				$name=filter_var($_POST['name'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$name=filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 				$name=mb_substr($name, 0, 150, $GLOBALS['encoding']);
 
 				$db->query("INSERT INTO `photos`
@@ -104,7 +105,7 @@ class myAlbums
 		if(isset($_POST['action'])&&($_POST['action']=='addalbum')){
 
 			if(!empty($_POST['name'])){
-				$name=filter_var($_POST['name'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$name=filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 				$q=$db->query("INSERT INTO `albums` (`uid`,`name`,`created`)
 					VALUES ('".$_SESSION['user']['id']."','".$name."','".time()."') ");
@@ -119,7 +120,7 @@ class myAlbums
 		if(isset($_POST['action'])&&($_POST['action']=='editalbum')){
 
 			if(!empty($_POST['name'])&&isset($_GET['id'])&&is_numeric($_GET['id'])){
-				$name=filter_var($_POST['name'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$name=filter_var($_POST['name'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 				$q=$db->query("UPDATE `albums` SET `name`='".$name."'
 				                WHERE `uid`='".$_SESSION['user']['id']."' AND `aid`='".intval($_GET['id'])."'");

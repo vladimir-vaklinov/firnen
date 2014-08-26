@@ -57,14 +57,14 @@ class viewAlbum
 		}
 
 		include(__DIR__.'/../lib/comments.inc.php');
-		$comm = new comments();
+		$comm=new comments();
 		$comm->aid=$aid;
 		$comm->actions();
 		$commentsForm=$comm->displayAddCommentForm();
 		$commentsList=$comm->displayComments();
 
 		include(__DIR__.'/../lib/ranking.inc.php');
-		$vote = new votes();
+		$vote=new votes();
 		$vote->aid=$aid;
 		$vote->actionSaveVote();
 		$currentVote=$vote->displayVotes();

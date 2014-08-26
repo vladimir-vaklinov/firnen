@@ -29,10 +29,10 @@ class signUp
 
 			if(!empty($_POST['fname'])&&!empty($_POST['lname'])&&!empty($_POST['email'])&&!empty($_POST['password'])
 			){
-				$fname=filter_var($_POST['fname'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
-				$lname=filter_var($_POST['lname'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
-				$email=filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
-				$password=filter_var($_POST['password'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$fname=filter_var($_POST['fname'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+				$lname=filter_var($_POST['lname'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
+				$email=filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+				$password=filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 				$q=$db->query("INSERT INTO `users` (`email`,`password`,`fname`,`lname`)
 								VALUES ('".$email."','".md5($password)."','".$fname."','".$lname."') ");
@@ -41,7 +41,7 @@ class signUp
 					$id=$db->insert_id();
 					$_SESSION['user']=array('id'=>$id, 'fname'=>$fname, 'lname'=>$lname, 'email'=>$email);
 					$this->actionstate='thankyou';
-					$dir = '/myalbums/';
+					$dir='/myalbums/';
 					$this->successmsg='Your registration completed successfully, click<a href="'.$dir.'">here</a> to create your first album';
 				}else{
 					$this->errormsg='<div class="errormsg">'.$db->error.'</div>';
@@ -58,14 +58,14 @@ class signUp
 			if(!empty($_POST['email'])&&!empty($_POST['password'])
 			){
 
-				$email=filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
-				$password=filter_var($_POST['password'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$email=filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+				$password=filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 
 				$q=$db->query("SELECT * FROM `users` WHERE `email`='".$email."' ");
 				if($db->num_rows($q)>0){
 					while($a=$db->fetch_array($q)){
 
-						if($a['state'] == 1){
+						if($a['state']==1){
 							$this->errormsg='<div class="errormsg">Yout account is locked.</div>';
 						}else{
 							if(md5($password)==$a['password']){

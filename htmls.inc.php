@@ -21,17 +21,19 @@ $GLOBALS['html']='<!DOCTYPE html>
 <div id="wrapper">
 	<header>
 		<div id="logoarea">
-			<a href="/"><img src="/assets/img/logo.jpg" alt="FIRNEN Logo" /></a>
+			<a href="/"><img src="/assets/img/firnen-logo.png" alt="FIRNEN Logo" /></a>
 		</div>
-		<div id="search-form">
-			<form method="post" action="/search/">
-				<input type="text" name="search" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150" />
-				<button type="submit" name="submit">Search</button>
-			</form>
+		<div id="header-area-right">
+			<nav id="menu">
+				<ul id="nav-menu">'.$GLOBALS['navlinks'].'</ul>			
+			</nav>
+			<div id="search-form">
+				<form method="post" action="/search/">
+					<input type="text" name="search" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150" />
+					<input type="submit" name="submit" placeholder="Search" />
+				</form>
+			</div>
 		</div>
-		<nav id="menu">
-			<ul id="nav-menu">'.$GLOBALS['navlinks'].'</ul>
-		</nav>
 	</header>
 
 	<section class="contentblock">

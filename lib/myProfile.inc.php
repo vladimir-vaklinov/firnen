@@ -29,17 +29,17 @@ class myProfile
 			$willUpdate=array();
 
 			if(isset($_POST['fname'])&&!empty($_POST['fname'])){
-				$fname=filter_var($_POST['fname'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$fname=filter_var($_POST['fname'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 				$willUpdate[]="`fname`='".$fname."' ";
 				$_SESSION['user']['fname']=$fname;
 			}
 			if(isset($_POST['lname'])&&!empty($_POST['lname'])){
-				$lname=filter_var($_POST['lname'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$lname=filter_var($_POST['lname'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 				$willUpdate[]="`lname`='".$lname."' ";
 				$_SESSION['user']['lname']=$lname;
 			}
 			if(isset($_POST['password'])&&!empty($_POST['password'])){
-				$password=filter_var($_POST['password'],FILTER_SANITIZE_STRING,FILTER_FLAG_STRIP_HIGH);
+				$password=filter_var($_POST['password'], FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH);
 				$willUpdate[]="`password`='".$password."' ";
 			}
 
@@ -69,7 +69,9 @@ class myProfile
 	{
 		global $db;
 
-		$result='';$fname='';$lname='';
+		$result='';
+		$fname='';
+		$lname='';
 
 		$q=$db->query("SELECT * FROM `users` WHERE `uid`='".$_SESSION['user']['id']."' ");
 		if($db->num_rows($q)>0){
