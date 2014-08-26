@@ -43,6 +43,7 @@ header{
 }
 #header-area-right{
 	display:inline-block;
+	max-width:720px;
 	box-sizing:border-box;	
 	float:right;
 	width:auto;
@@ -50,10 +51,10 @@ header{
 	padding:32px 32px 31px 0;	
 }
 #search-form{
-	display:inline-block;	
+	display:inline-block;
+	width:210px;
 	text-align:right;
 	float:left;
-	padding:0;
 	margin-right:0.4rem;
 	color:#CCCCCC;
 	padding:0.4rem 0 0.3rem 0.4rem;	
@@ -63,7 +64,7 @@ header{
 }
 #search-form input{
 	display:inline-block;
-	width:85%;	
+	width:85%;
 	float:left;	
 	font-size:0.95rem;
 	color:#6A738F;	
@@ -71,12 +72,11 @@ header{
 	background-color:#1B1F2E;
 	outline:none;	
 }
-#search-form input[type="submit"]{
-	background:transparent url(../img/search-icon.png) no-repeat scroll 0 0;
+#search-form button{
+	background:transparent url(/assets/img/search-icon.png) no-repeat scroll 0 0;
 	display:inline-block;	
 	color: transparent;
-	border:0;
-	border-style: none;   
+	border:0 none;
 	width:22px;
 	height:22px;
 	float:left;	

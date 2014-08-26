@@ -15,6 +15,7 @@ $GLOBALS['html']='<!DOCTYPE html>
 <link rel="stylesheet" href="/assets/css/myalbums.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/css/profile.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/css/public.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/assets/css/responsive.css" type="text/css" media="all" />
 <link rel="stylesheet" href="/assets/css/print.css" type="text/css" media="print" />
 </head>
 <body>
@@ -29,8 +30,8 @@ $GLOBALS['html']='<!DOCTYPE html>
 			</nav>
 			<div id="search-form">
 				<form method="post" action="/search/">
-					<input type="text" name="search" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150" />
-					<input type="submit" name="submit" placeholder="Search" />
+					<input type="text" name="search" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150"/>
+					<button type="submit" name="submit"></button>
 				</form>
 			</div>
 		</div>

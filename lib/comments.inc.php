@@ -57,7 +57,8 @@ class comments
 					<img src="/assets/img/captcha/'.$_SESSION['captcha123']['img'].'" alt="Captcha"/>
 					<input type="number" name="captcha" id="captcha" value="" required="required"/>
 					<button type="submit" id="comment-button">Comment</button>
-				</p>				
+				</p>
+				<p class="submitbtn">
 				<input type="hidden" name="action" value="addcomment"/>
 				<input type="hidden" name="aid" value="'.$this->aid.'"/>
 				<input type="hidden" name="phid" value="'.$this->phid.'"/>

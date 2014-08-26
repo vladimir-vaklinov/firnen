@@ -221,6 +221,12 @@ h2#p-photo-name{
 	display:inline-block;
 	padding-right:10px;
 }
+#show-votes{
+	width:100%;
+	min-height:20px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
 
 /* ******************* INSIDE ALBUM ******************* */
 #view-album{

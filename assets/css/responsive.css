@@ -1,0 +1,353 @@
+/* ********************* TABLETS ********************* */
+
+@media all and (max-width:1000px) and (min-width:756px){
+
+	body{
+		min-width:99% !important;
+		width:99% !important;
+	}
+	#wrapper{
+		width:100% !important;
+	}
+	header{
+		height:auto;
+		min-height:140px;
+	}
+	#logoarea{
+		width:100% !important;
+		padding:10px 0 15px;
+	}
+	#header-area-right{
+		width:100% !important;
+		max-width:100% !important;
+		padding-top:0;
+		padding-bottom:15px;
+		margin:0 auto !important;
+		float:none;
+	}
+    nav#menu{
+	    width:90%;
+	    padding-bottom:10px;
+	    float:none;
+	    text-align:center;
+    }
+	#menu #nav-menu{
+		text-align:center;
+		justify-content:center;
+	}
+	#search-form{
+		width:30%;
+		padding-top:5px;
+		text-align:center;
+		margin:0 auto;
+		float:none;
+	}
+
+	section.contentblock{
+		min-width:96% !important;
+		width:96% !important;
+		padding-left:2%;
+		padding-right:2%;
+		margin:0 auto !important;
+	}
+    #publicphotos,
+    #albums-blk,
+    #view-album{
+	    width:100%;
+	    padding:20px 0;
+    }
+
+	#publicphotos h1,
+	#albums-blk h2,
+	h2#view-album-username{
+		text-align:center;
+	}
+	h2#view-album-username img{
+		display:none;
+	}
+
+	#albums-blk-items,
+	#p-albums-items{
+		justify-content:center;
+	}
+
+	#show-votes{
+		width:100%;
+	}
+
+	#view-album-blk{
+		width:100% !important;
+		justify-content:center;
+	}
+
+	#viewphoto h1.viewphoto-album-name,
+	#viewphoto h2.viewphoto-username{
+		width:100%;
+		margin:0;
+		text-align:center;
+	}
+	#viewphoto h2.viewphoto-username img{
+		display:none;
+	}
+	#view-photo-blk{
+		width:100%;
+		height:auto;
+		min-height:600px;
+		margin:0;
+		text-align:center;
+	}
+	#view-photo-blk a{
+		width:7%;
+		height:auto;
+		min-height:600px;
+	}
+
+	#view-photo-blk img{
+		width:83%;
+		height:auto;
+	}
+
+	#vote-block{
+		text-align:center;
+	}
+	#vote-block #vote-block-title{
+		width:100%;
+		padding-bottom:15px;
+		text-align:center;
+	}
+
+	h2#p-photo-name{
+		text-align:center;
+		margin:0;
+	}
+
+	#search-results{
+		width:100%;
+	}
+
+	#signup,
+	#profile,
+	#albums-manage-blk{
+		width:96%;
+		padding:5% 2%;
+	}
+	#register-form,
+	#login-form{
+		width:100%;
+		padding-bottom:40px;
+		float:none;
+	}
+
+	#new-album{
+		width:96%;
+		padding:5% 2%;
+	}
+
+	#signup #login-form form p button{
+		float:left;
+	}
+
+	footer{
+		width:100% !important;
+		min-width:100% !important;
+	}
+
+}
+
+
+/* ********************* SMALL DEVICES ********************* */
+
+@media all and (max-width:756px) and (min-width:0px){
+
+	body{
+		min-width:99% !important;
+		width:99% !important;
+	}
+	#wrapper{
+		width:100% !important;
+	}
+	header{
+		height:auto;
+		min-height:140px;
+		padding-bottom:15px;
+	}
+	#logoarea{
+		width:100% !important;
+		padding:10px 0 15px;
+	}
+	#header-area-right{
+		width:100% !important;
+		max-width:100% !important;
+		padding:0 0 15px;
+		margin:0 auto !important;
+		float:none;
+	}
+	nav#menu{
+		width:99%;
+		padding-bottom:10px;
+		float:none;
+		text-align:center;
+	}
+	#menu #nav-menu{
+		display:block;
+		text-align:center;
+		justify-content:center;
+	}
+	#menu #nav-menu li{
+		width:98%;
+		padding-bottom:5px;
+	}
+	#menu #nav-menu li a{
+		padding:10px 0;
+		width:100%;
+	}
+
+	#search-form{
+		width:60%;
+		padding-top:5px;
+		text-align:center;
+		margin:0 auto;
+		float:none;
+	}
+
+	section.contentblock{
+		min-width:96% !important;
+		width:96% !important;
+		padding-left:2%;
+		padding-right:2%;
+		margin:0 auto !important;
+	}
+	#publicphotos,
+	#albums-blk,
+	#view-album{
+		width:100%;
+		padding:20px 0;
+	}
+
+	#publicphotos h1,
+	#albums-blk h2,
+	h2#view-album-username{
+		text-align:center;
+	}
+	h2#view-album-username img{
+		display:none;
+	}
+
+	#albums-blk-items,
+	#p-albums-items{
+		justify-content:center;
+	}
+
+	#show-votes{
+		width:100%;
+	}
+
+	#view-album-blk{
+		width:100% !important;
+		justify-content:center;
+	}
+
+	#viewphoto h1.viewphoto-album-name,
+	#viewphoto h2.viewphoto-username{
+		width:100%;
+		margin:0;
+		text-align:center;
+	}
+	#viewphoto h2.viewphoto-username img{
+		display:none;
+	}
+	#view-photo-blk{
+		width:100%;
+		height:auto;
+		min-height:450px;
+		margin:0;
+		text-align:center;
+	}
+	#view-photo-blk a{
+		width:7%;
+		height:auto;
+		min-height:450px;
+	}
+
+	#view-photo-blk img{
+		width:78%;
+		height:auto;
+	}
+
+	#vote-block{
+		text-align:center;
+	}
+	#vote-block #vote-block-title{
+		width:100%;
+		padding-bottom:15px;
+		text-align:center;
+	}
+
+	h2#p-photo-name{
+		text-align:center;
+		margin:0;
+	}
+
+	#search-results{
+		width:100%;
+	}
+
+	#signup,
+	#profile,
+	#albums-manage-blk{
+		width:96%;
+		padding:5% 2%;
+	}
+	#register-form,
+	#login-form{
+		width:100%;
+		padding-bottom:40px;
+		float:none;
+	}
+
+	#new-album{
+		width:96%;
+		padding:5% 2%;
+	}
+
+	#signup #login-form form p button{
+		float:left;
+	}
+
+	#comment-list .full-comment{
+		padding:10px 0;
+	}
+
+	#comment-block p.captcha{
+		display:block;
+		padding:0;
+		margin:0;
+		padding-bottom:20px;
+		width:100%;
+	}
+	#comment-block p.captcha button{
+		display:block;
+		margin-top:10px;
+		width:100%;
+	}
+
+	footer{
+		width:100% !important;
+		min-width:100% !important;
+		height:auto;
+	}
+
+	footer div#copyright p{
+		display:block;
+		width:100%;
+		float:none;
+	}
+
+	footer div#media{
+		display:block;
+		width:100%;
+		float:none;
+		text-align:center;
+	}
+
+}
