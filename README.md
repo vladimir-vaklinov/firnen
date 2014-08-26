@@ -12,6 +12,7 @@ CHANGELOG:
 =========
 <p>
 <ul>
+<li>1 Final version reached.</li>
 <li>0.9.1 Comments form added on the photos page.</li>
 <li>0.9 Paging needs to be created.</li>
 <li>0.8 Completed all except ByAuthor. Paging needs to be created.</li>
@@ -26,7 +27,6 @@ TODO:
 =========
 <p>
 <ul>
-<li>2. Paging on most of the public pages.</li>
-<li>1. Rating system for the albums.</li>
+<li>1. Paging on most of the public pages.</li>
 </ul>
 </p>
