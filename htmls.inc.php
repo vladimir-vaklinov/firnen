@@ -30,7 +30,7 @@ $GLOBALS['html']='<!DOCTYPE html>
 			</nav>
 			<div id="search-form">
 				<form method="post" action="/search/">
-					<input type="text" name="search" placeholder="Search Photos / Albums" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150"/>
+					<input type="text" name="search" placeholder="Photos / Albums" id="search-area" value="'.$GLOBALS['searchstr'].'" required="required" maxlength="150"/>
 					<button type="submit" name="submit"></button>
 				</form>
 			</div>
