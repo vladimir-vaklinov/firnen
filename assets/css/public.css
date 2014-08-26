@@ -410,6 +410,7 @@ h2#comment-block-title{
 	text-align:left;
 	padding:0.5rem 4rem;
 	box-sizing:border-box;
+    overflow-wrap:break-word;
 }
 #comment-list .full-comment-name{
 	display:block;
