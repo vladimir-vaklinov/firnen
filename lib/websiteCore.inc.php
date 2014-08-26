@@ -355,7 +355,7 @@ class websiteCore
 				</a>
 				<div class="p-photos-inf">
 					<strong class="p-photos-name">'.$name.'</strong>
-					<strong class="p-photos-name">by Author (link)</strong>
+					<strong class="p-photos-author">by Author (link)</strong>
 					<em class="p-photos-date">'.date('Y/m/d', $created).'</em>
 				</div>
 			</div>';

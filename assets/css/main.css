@@ -55,9 +55,9 @@ header{
 	width:200px;	
 	text-align:right;
 	float:left;
-	margin-right:0.2rem;
+	margin-right:0.3rem;
 	color:#CCCCCC;
-	padding:0.45rem 0 0.22rem 0.4rem;	
+	padding:0.44rem 0 0.21rem 0.4rem;	
 	background-color:#1B1F2E;
 	border:1px solid rgba(255,255,255,0.1);
 	border-radius:6px;
@@ -135,7 +135,7 @@ header{
 }
 #menu #nav-menu li#profile-links ul li#nav-profile a,
 #menu #nav-menu li#profile-links ul li#nav-myalbums a{
-	line-height:1.4 !important;
+	line-height:1.5 !important;
 	color:#F16C65;
 	padding:6px;
 	font-size:0.85rem;
@@ -166,9 +166,10 @@ section.contentblock{
 	text-align:center;
 	vertical-align:top;
 	box-sizing:border-box;
+}
+#paging{
 	padding-bottom:1rem;
 }
-
 #paging a{	
 	font-size:0.9rem;
 	background-color:#B6B7BF;

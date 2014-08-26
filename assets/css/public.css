@@ -46,25 +46,30 @@
 .p-photos-block .p-photos-inf{
 	display:block;
 	width:100%;
-	height:20px;
-	padding-top:5px;
+	padding:2px 10px;
+	box-sizing:border-box;
 }
-
 .p-photos-block .p-photos-inf strong{
 	display:block;
-	width:90%;
-	padding-left:5px;
-	text-align:left;
 	color:#6A738F;
-}
+	box-sizing:border-box;
+	max-height:20px;
+	padding-top:0.2rem;
+	overflow:hidden;
+	word-wrap:break-word;
+	text-align:left;
+	}
 
+.p-photos-block .p-photos-inf strong.p-photos-name {
+	font-size: 1.1rem;
+	color: #2D2F3B;
+}
 .p-photos-block .p-photos-inf em{
 	display:block;
-	width:60%;
-	padding-left:5px;
 	text-align:left;
 	font-size:0.9em;
 	color:#6A738F;
+	box-sizing:border-box;
 }
 
 /* ***************** VIEW PHOTOS ************************ */
@@ -157,7 +162,7 @@ h2#p-photo-name{
 /* ******************* ALBUMS ******************* */
 #albums-blk{
 	width:965px;
-	padding:29px 0 29px 35px;
+	padding:29px 0 5px 35px;
 }
 
 #albums-blk h2{
@@ -184,8 +189,31 @@ h2#p-photo-name{
 	border-right:17px solid #FFF;
 	border-bottom:16px solid #FFF;
 	background-color:#CBCBD0;
+	
 }
-
+div.albums-inf,
+div.albums-likes{
+	max-width:204px;
+	max-height:18px;
+	box-sizing:border-box;	
+	overflow:hidden;
+	margin:0.2rem 0.5rem;
+}
+div.albums-inf strong{
+	font-size:1.1rem;
+	color:#2D2F3B;
+}
+div.albums-likes strong{
+	font-weight:normal;
+	color:#666;
+}
+div.albums-likes strong.likesnum,
+div.albums-likes strong.dislikesnum{	
+	border-right:1px solid rgba(255,255,255,0.3);
+	text-align:center;
+	padding-right:0.4rem;
+	padding-left:0.1rem;
+}
 .album-block a.aimgi{
 	display:block;
 	width:204px;
@@ -202,7 +230,7 @@ h2#p-photo-name{
 	width:auto;
 	padding:10px 5px 10px 40px;
 	border:1px solid #919090;
-	border-radius:5px;
+	border-radius:5px;	
 	background:url(/assets/img/like_it.jpg) no-repeat 5px center;
 	text-align:right;
 	font-family:"Calibri", Verdana, Arial, sans-serif;
@@ -212,47 +240,55 @@ h2#p-photo-name{
 #like{
 	color:#F16C65;
 	background-image:url(/assets/img/like_it.jpg);
+	background-color:white;
+	font-weight:bold;
 }
 #dislike{
 	color:#919090;
 	background-image:url(/assets/img/dont_like.jpg);
+	background-color:white;	
+	font-weight:bold;
 }
 #likeForm, #dislikeForm{
 	display:inline-block;
 	padding-right:10px;
 	vertical-align: text-bottom;
 }
-#vote-block-title{
-    display:inline-block;
-	margin-right:10px;
- }
-#vote-block{
-	margin:15px 35px 15px 15px;
+#vote-block{	
 	text-align:right;
+	background-color:#eee;
+	padding:0.5rem 35px;	
 }
+
 #show-votes{
 	width:100%;
 	min-height:20px;
-	padding-top:20px;
-	padding-bottom:20px;
 }
+#vote-block-title{
+	vertical-align:top;
+    display:inline-block;
+	padding-top:0.8rem;
+	margin-right:1rem;	
+	font-size:1.3rem;
+ }
 
 /* ******************* INSIDE ALBUM ******************* */
 #view-album{
 	display:block;
-	width:965px;
+	width:100%;
 	min-height:400px;
-	padding:29px 0 10px 35px;
+	padding-top:2rem;
 }
 
 #view-album-username{
 	display:block;
-	width:100%;
+	width:auto;
 	height:30px;
 	color:#2d2f3b;
 	text-align:left;
 	font-size:1.13em;
 	font-weight:normal;
+	margin-left:35px;
 }
 
 #view-album-name{
@@ -270,12 +306,13 @@ h2#p-photo-name{
 
 #view-album-blk{
 	display:block;
-	width:950px;
+	width:auto;
 	background-color:#FFF;
 	display:-webkit-flex;
 	display:flex;
 	-webkit-flex-wrap:wrap;
 	flex-wrap:wrap;
+	margin-left:35px;
 }
 
 #view-album-blk a{
