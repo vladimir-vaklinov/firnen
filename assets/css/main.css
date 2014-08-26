@@ -147,7 +147,7 @@ header{
 	float:left;
 }
 #menu #nav-menu li#profile-links ul li#nav-profile a:hover{
-	text-decoration:underline;
+  /* text-decoration:underline;*/
 }
 
 /* ********************** CONTENT ***************************** */

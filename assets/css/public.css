@@ -431,7 +431,9 @@ h2#comment-block-title{
 }
 
 /* *********************** SEARCH AREA *********************** */
-
+#search-area{
+    padding:2px 0 0 3px;
+}
 #search-results{
 	width:965px;
 	padding:29px 0 29px 35px;
