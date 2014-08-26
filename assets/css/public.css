@@ -220,6 +220,15 @@ h2#p-photo-name{
 #likeForm, #dislikeForm{
 	display:inline-block;
 	padding-right:10px;
+	vertical-align: text-bottom;
+}
+#vote-block-title{
+    display:inline-block;
+	margin-right:10px;
+ }
+#vote-block{
+	margin:15px 35px 15px 15px;
+	text-align:right;
 }
 #show-votes{
 	width:100%;
