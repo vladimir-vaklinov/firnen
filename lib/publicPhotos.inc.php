@@ -16,9 +16,13 @@ class publicPhotos
 		global $db, $ws;
 
 		$page=0;
-		$resultperpage=30;
+		$resultperpage=8;
 
-		$qt=$db->query("SELECT * FROM 'photos' ");
+		if(isset($_GET['task_1']))
+			$page=intval($_GET['task_1']);
+
+
+		$qt=$db->query("SELECT * FROM `photos` ");
 		$total=$db->num_rows($qt);
 
 		$result='
@@ -45,26 +49,27 @@ class publicPhotos
 			$result.='
 			<div id="paging">';
 
+			if($page>0){
+				$backpage=($page-$resultperpage);
+				$result.='<a href="/gallery/'.$backpage.'/" class="prev">&laquo;</a>';
+			}
+
 			$a=0;
 			$b=0;
-			if($_GET['page']>0){
-				$backpage=($_GET['page']-$resultperpage);
-				print '<a href="/gallery/'.$backpage.'/" class="prev">&laquo;</a>';
-			}
 
 			while($a<$total){
 				$a=$a+$resultperpage;
-				if(($b<(($_GET['page']/$resultperpage)+10))&&($b>(($_GET['page']/$resultperpage)-10))){
-					print '<a href="/gallery/'.($b*$resultperpage).'/"';
-					if($_GET['page']==($b*$resultperpage))
-						print ' class="sel"';
-					print '>'.($b+1).'</a>';
+				if(($b<(($page/$resultperpage)+10))&&($b>(($page/$resultperpage)-10))){
+					$result.='<a href="/gallery/'.($b*$resultperpage).'/"';
+					if($page==($b*$resultperpage))
+						$result.=' class="sel"';
+					$result.='>'.($b+1).'</a>';
 				}
 				$b++;
 			}
-			if($_GET['page']<($total-$resultperpage)){
-				$nextpage=($_GET['page']+$resultperpage);
-				print '<a href="/gallery/'.$nextpage.'/" class="next">&raquo;</a>';
+			if($page<($total-$resultperpage)){
+				$nextpage=($page+$resultperpage);
+				$result.='<a href="/gallery/'.$nextpage.'/" class="next">&raquo;</a>';
 			}
 			$result.='
 			</div>';

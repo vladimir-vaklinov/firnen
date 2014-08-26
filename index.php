@@ -69,12 +69,7 @@ if((isset($_GET['task_0'])&&($_GET['task_0']=='gallery'))||(isset($_GET['task_0'
 
 	include(__DIR__."/lib/publicPhotos.inc.php");
 	$ph=new publicPhotos();
-
-	if(isset($_GET['task_1'])&&is_numeric($_GET['task_1'])){
-
-	}else{
-		$GLOBALS['contentblock']=$ph->showAll();
-	}
+	$GLOBALS['contentblock']=$ph->showAll();
 
 }
 

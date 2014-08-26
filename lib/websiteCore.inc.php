@@ -262,9 +262,12 @@ class websiteCore
 	 * @param string $photo String If not empty - the first photo in the album will be shown.
 	 * @param string $name String Name of the album
 	 * @param int $created Integer Date - created
+	 * @param int $likes Number of Likes
+	 * @param int $dislikes Number of DisLikes
+	 * @param int $comments Number of Comments
 	 * @return string
 	 */
-	public function albumPreview($searchID=0, $aid=0, $uid=0, $photo='', $name='', $created=0)
+	public function albumPreview($searchID=0, $aid=0, $uid=0, $photo='', $name='', $created=0,$likes=0,$dislikes=0,$comments=0)
 	{
 
 
@@ -300,6 +303,11 @@ class websiteCore
 				</a>
 				<div class="albums-inf">
 					<strong>'.$name.'</strong>
+				</div>
+				<div class="albums-likes">
+					<strong class="likesnum">Likes: '.$likes.'</strong>
+					<strong class="dislikesnum">Dislikes: '.$dislikes.'</strong>
+					<strong class="commentsnum">Comments: '.$comments.'</strong>
 				</div>
 			</div>
 			';
