@@ -35,7 +35,6 @@ $GLOBALS['html']='<!DOCTYPE html>
 			</div>
 		</div>
 	</header>
-
 	<section class="contentblock">
 		'.$GLOBALS['contentblock'].'
 	</section>
