@@ -12,6 +12,7 @@ CHANGELOG:
 =========
 <p>
 <ul>
+<li>1.2 Responsive design added</li>
 <li>1.1 Final version with pagings.</li>
 <li>1.0 Final version reached.</li>
 <li>0.9.1 Comments form added on the photos page.</li>
