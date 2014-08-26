@@ -33,7 +33,7 @@ header{
 }
 #logoarea{
 	display:inline-block;	
-	padding:32px 32px 31px 35px;
+	padding:32px 5px 31px 35px;
 	box-sizing:border-box;		
 	float:left;
 }
@@ -52,23 +52,24 @@ header{
 }
 #search-form{
 	display:inline-block;
-	width:210px;
+	width:200px;	
 	text-align:right;
 	float:left;
-	margin-right:0.4rem;
+	margin-right:0.2rem;
 	color:#CCCCCC;
-	padding:0.4rem 0 0.3rem 0.4rem;	
+	padding:0.45rem 0 0.22rem 0.4rem;	
 	background-color:#1B1F2E;
 	border:1px solid rgba(255,255,255,0.1);
 	border-radius:6px;
 }
 #search-form input{
 	display:inline-block;
-	width:85%;
+	width:87%;
 	float:left;	
-	font-size:0.95rem;
+	font-size:0.92rem;
 	color:#6A738F;	
 	border:none;
+	font-size:0.9rem;
 	background-color:#1B1F2E;
 	outline:none;	
 }
@@ -103,12 +104,12 @@ header{
 }
 #menu #nav-menu li{
 	display:block;
-	margin:0 3px;
+	margin-right:4px;
 	justify-content:flex-end;
 }
 #menu #nav-menu a{
 	display:inline-block;
-	padding:7px 18px;
+	padding:7px 16px;
 	line-height:1;
 	color:#8088A3;
 	border:1px solid #8088A3;
@@ -136,10 +137,15 @@ header{
 #menu #nav-menu li#profile-links ul li#nav-myalbums a{
 	line-height:1.4 !important;
 	color:#F16C65;
-	padding:6px 10px;
-	font-size:0.9rem;
+	padding:6px;
+	font-size:0.85rem;
 	background-color:#1B1F2E;
 	border:0 !important;
+	word-break:break-all;
+	word-wrap: break-word;
+	max-width:100px;
+	max-height:20px;
+	overflow:hidden;
 }
 #menu #nav-menu li#profile-links ul li#nav-profile a img{
 	position:relative;
