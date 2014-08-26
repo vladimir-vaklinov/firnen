@@ -20,33 +20,40 @@ class votes
 	{
 
 		global $db, $ws;
-		if(isset($_POST['action'])&&($_POST['action']=='vote')){
-
-			$likes=1;$dislikes=0;
-			if(isset($_POST['likes']) && ($_POST['likes'] == 2)){
-				$likes=0; $dislikes=1;
-			}
-			$db->query("INSERT INTO `votes` (`aid`,`ip`,`likes`,`dislikes`)
-			VALUES ('".$this->aid."','".ip2long($_SERVER['REMOTE_ADDR'])."','".$likes."','".$dislikes."') ");
-		}	
+		if(isset($_POST['action'])&&($_POST['like'])){
+			$likes=1; $dislikes=0;
+		}
+		if(isset($_POST['action'])&&($_POST['like'])){
+			$likes=0; $dislikes=1;
+		}
+		
+		$db->query("INSERT INTO `votes` (`aid`,`likes`,`dislikes`)
+		VALUES ('".$this->aid."','".ip2long($_SERVER['REMOTE_ADDR'])."','".$likes."','".$dislikes."') ");
+		
 	}
 
 	/**
 	 * Display votes per album
 	 */
 	public function displayVotes(){
-		$vote=0;$dislikes=0;
+		global $db;
+		$vote=$db->query("SELECT * SUM(`likes`) AS `total_likes` FROM `votes` WHERE `aid`='3'");
+		$dislikes=$db->query("SELECT * SUM(`dislikes`) AS `total_dislikes` FROM `votes` WHERE `aid`='3'");
 
 		$result='
+		
 		<div id="vote-block">
 			<h2 id="vote-block-title">Like this album:</h2>
-			<form method="post" action="?#vote-block" name="like">
-				<p class="current-votes"><strong>Likes:</strong> '.$vote.' | <strong>Dislikes:</strong> '.$dislikes.'</p>
-				<p>
-					<input type="radio" name="likes" value="1" onclick="this.form.submit()" id="like"/>
-					<input type="radio" name="likes" value="2" onclick="this.form.submit()" id="dislike"/>
-				</p>
+			<form method="post" action="?#vote-block" name="like" id="likeForm">
+				<input type="submit" name="likes" value="" id="like"/>
+				<label for="like">'.$vote.'</label>
 				<input type="hidden" name="action" value="vote"/>
+				<input type="hidden" name="aid" value="'.$this->aid.'"/>
+			</form>
+			<form method="post" action="?#vote-block" name="dislike" id="dislikeForm">
+				<input type="submit" name="dislikes" value="" id="dislike"/>
+				<label for="like">'.$dislikes.'</label>
+				<input type="hidden" name="action" value="dislike"/>
 				<input type="hidden" name="aid" value="'.$this->aid.'"/>
 			</form>
 		</div>';
